@@ -1,0 +1,84 @@
+I-Logix-RPY-Archive version 8.8.0 * 6118532
+
+- m_fileModifyTime = { IRPYRawContainer 
+	- size = 13;
+	- value = "DefaultComponent/DefaultConfig/Default/Osoba przed winda.java" 6.22.2015::11:41:19
+	"DefaultComponent/DefaultConfig/Default/Osoba_przed_winda.java" 6.22.2015::13:3:5
+	"DefaultComponent/DefaultConfig/Default/PanelPietra.java" 6.22.2015::14:18:4
+	"DefaultComponent/DefaultConfig/Default/PanelWindy.java" 6.22.2015::14:29:51
+	"DefaultComponent/DefaultConfig/Default/Pasazer.java" 6.22.2015::11:41:4
+	"DefaultComponent/DefaultConfig/Default/Sterownik.java" 6.22.2015::14:18:52
+	"DefaultComponent/DefaultConfig/Default/Winda.java" 6.22.2015::14:29:51
+	"DefaultComponent/DefaultConfig/Default/actor_1.java" 6.22.2015::11:32:27
+	"DefaultComponent/DefaultConfig/Default/actor_2.java" 6.22.2015::11:32:30
+	"DefaultComponent/DefaultConfig/Default/class_10.java" 6.22.2015::11:43:8
+	"DefaultComponent/DefaultConfig/Default/class_13.java" 6.22.2015::12:45:47
+	"DefaultComponent/DefaultConfig/Default/class_14.java" 6.22.2015::12:45:58
+	"DefaultComponent/DefaultConfig/Default/class_9.java" 6.22.2015::11:42:59
+	
+}
+- size = 7;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "PanelWindy";
+	- _id = GUID fd04bcde-fbb1-4d73-96e4-6644e7235344;
+}
+- genTime = 6.22.2015::14:29:51;
+- hElement = { IHandle 
+	- _m2Class = "IActor";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Osoba_przed_winda";
+	- _id = GUID c857f40f-408c-4a6e-b9fe-bdbc81634f97;
+}
+- genTime = 6.22.2015::14:29:51;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Sterownik";
+	- _id = GUID 1673c37a-b97f-4a4c-b911-4916c62507a4;
+}
+- genTime = 6.22.2015::14:29:51;
+- hElement = { IHandle 
+	- _m2Class = "IActor";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Pasazer";
+	- _id = GUID ae54d59d-52f4-4e0a-b975-6a94928b1084;
+}
+- genTime = 6.22.2015::14:29:51;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "Winda";
+	- _id = GUID 24594c34-90ea-49f0-8b7f-7918832a1e72;
+}
+- genTime = 6.22.2015::14:29:51;
+- hElement = { IHandle 
+	- _m2Class = "ICodeGenConfigInfo";
+	- _filename = "DefaultComponent.cmp";
+	- _subsystem = "";
+	- _class = "";
+	- _name = "DefaultComponent\\DefaultConfig";
+	- _id = GUID d7db57e0-be4e-4de3-9b45-b638d1e78d31;
+}
+- genTime = 6.22.2015::14:29:51;
+- hElement = { IHandle 
+	- _m2Class = "IClass";
+	- _filename = "Default.sbs";
+	- _subsystem = "Default";
+	- _class = "";
+	- _name = "PanelPietra";
+	- _id = GUID e948315c-45b8-4762-900d-cd2b0dc9b2fb;
+}
+- genTime = 6.22.2015::14:29:51;
+

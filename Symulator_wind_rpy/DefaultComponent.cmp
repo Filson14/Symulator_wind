@@ -1,0 +1,221 @@
+I-Logix-RPY-Archive version 8.8.0 Java 6118532
+{ IComponent 
+	- _id = GUID 8a1d1537-88c0-4510-a79b-65a66e28489b;
+	- _myState = 139264;
+	- _name = "DefaultComponent";
+	- _modifiedTimeWeak = 6.22.2015::11:28:18;
+	- _lastID = 1;
+	- m_buildType = Executable;
+	- m_libraries = "";
+	- m_additionalSources = "";
+	- m_standardHeaders = "";
+	- m_includePath = "";
+	- m_initializationCode = "";
+	- m_folder = { IFolder 
+		- _id = GUID 20aa389b-3878-4cf8-b865-6129435cff47;
+		- _myState = 73728;
+		- _name = "Files";
+		- _modifiedTimeWeak = 6.22.2015::11:28:6;
+		- m_path = "";
+		- Elements = { IRPYRawContainer 
+			- size = 0;
+		}
+		- Files = { IRPYRawContainer 
+			- size = 0;
+		}
+	}
+	- m_configActive = { ICodeGenConfigInfoHandle 
+		- _m2Class = "ICodeGenConfigInfo";
+		- _id = GUID fd249426-7da1-496a-ac82-5f9f6130f639;
+	}
+	- Configs = { IRPYRawContainer 
+		- size = 2;
+		- value = 
+		{ ICodeGenConfigInfo 
+			- _id = GUID d7db57e0-be4e-4de3-9b45-b638d1e78d31;
+			- _myState = 8192;
+			- _name = "DefaultConfig";
+			- _modifiedTimeWeak = 1.2.1990::0:0:0;
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 4749f2a2-3f97-4f8a-9633-4ec122db1c9f;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "E:/Filson/Dropbox/Studia/Semestr 6/Systemy Czasu Rzeczywistego/Projekt/Symulator_wind/DefaultComponent/DefaultConfig/DefaultComponent.bat";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID 53be00b0-567e-478a-b8c3-86826fca98aa;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "E:/Filson/Dropbox/Studia/Semestr 6/Systemy Czasu Rzeczywistego/Projekt/Symulator_wind/DefaultComponent/DefaultConfig/MainDefaultComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = None;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 0;
+			}
+			- _root = { IFolder 
+				- _id = GUID 0c357fea-86c1-4158-b52f-a94ca41935ad;
+				- _myState = 8192;
+				- _name = "DefaultConfig";
+				- _modifiedTimeWeak = 1.2.1990::0:0:0;
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 1.2.1990::0:0:0;
+			- strongCGTime = 1.2.1990::0:0:0;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+		{ ICodeGenConfigInfo 
+			- _id = GUID fd249426-7da1-496a-ac82-5f9f6130f639;
+			- _myState = 8192;
+			- _name = "anim";
+			- _modifiedTimeWeak = 6.22.2015::13:25:48;
+			- HyperLinks = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IMHyperLink 
+					- _id = GUID 5bad302f-5d15-4c91-a5f8-5ce78568e1b1;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Makefile";
+					- _linkType = "FREE";
+					- _linkTarget = "E:/Filson/Dropbox/Studia/Semestr 6/Systemy Czasu Rzeczywistego/Projekt/Symulator_wind/DefaultComponent/configuration_0/DefaultComponent.bat";
+					- isConfigurationFileHyperLink = 1;
+				}
+				{ IMHyperLink 
+					- _id = GUID 57806308-84bb-48a2-8a64-cff8f2f6097b;
+					- _modifiedTimeWeak = 1.2.1990::0:0:0;
+					- _dependsOn = { INObjectHandle 
+						- _m2Class = "";
+					}
+					- _linkDispName = "Edit Main File";
+					- _linkType = "FREE";
+					- _linkTarget = "E:/Filson/Dropbox/Studia/Semestr 6/Systemy Czasu Rzeczywistego/Projekt/Symulator_wind/DefaultComponent/configuration_0/MainDefaultComponent";
+					- isConfigurationFileHyperLink = 1;
+				}
+			}
+			- _scopeType = Explicit;
+			- _libraries = "";
+			- _additionalSources = "";
+			- _standardHeaders = "";
+			- _includePath = "";
+			- _targetMain = "";
+			- _instrumentation = Animation;
+			- _timeModel = RealTime;
+			- m_generateActors = 1;
+			- _statechartImplementation = Flat;
+			- _initializationCode = "";
+			- _checksList = 0 ;
+			- ScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- InitialInstances = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IClass";
+					- _filename = "Default.sbs";
+					- _subsystem = "Default";
+					- _class = "";
+					- _name = "Sterownik";
+					- _id = GUID 1673c37a-b97f-4a4c-b911-4916c62507a4;
+				}
+			}
+			- _root = { IFolder 
+				- _id = GUID 6dcb42d4-dd4d-4094-bd30-04241cd2949f;
+				- _myState = 8192;
+				- _name = "anim";
+				- _modifiedTimeWeak = 6.22.2015::11:28:20;
+				- m_path = "";
+				- Elements = { IRPYRawContainer 
+					- size = 0;
+				}
+				- Files = { IRPYRawContainer 
+					- size = 0;
+				}
+			}
+			- weakCGTime = 6.22.2015::13:25:48;
+			- strongCGTime = 6.22.2015::11:28:28;
+			- AnimScopeElements = { IRPYRawContainer 
+				- size = 0;
+			}
+			- m_allInAnimScope = 1;
+			- m_generateUsecases = 0;
+		}
+	}
+	- HandlesInMe = { IRPYRawContainer 
+		- size = 3;
+		- value = 
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "Default.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "Default";
+			- _id = GUID e44b63fa-8f41-4ffb-9d9b-bea8aadd7fa2;
+		}
+		{ IHandle 
+			- _m2Class = "IProfile";
+			- _filename = "$OMROOT\\Profiles\\JavaDoc\\\\JavaDocProfile.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "JavaDocProfile";
+			- _id = GUID 19700e28-456f-4c97-a19c-b95dcb3e9dff;
+		}
+		{ IHandle 
+			- _m2Class = "ISubsystem";
+			- _filename = "e:\\Program Files\\IBM\\Rational\\Rhapsody\\8.0.4\\Share\\LangJava\\JDKRefModel\\JDKModel_rpy\\java.sbs";
+			- _subsystem = "";
+			- _class = "";
+			- _name = "java";
+			- _id = GUID 108dc565-5d8e-486b-a11b-860040b36752;
+		}
+	}
+	- VariationPoints = { IRPYRawContainer 
+		- size = 0;
+	}
+	- SelectedVariants = { IRPYRawContainer 
+		- size = 0;
+	}
+	- weakCGTime = 6.22.2015::11:28:18;
+	- strongCGTime = 1.2.1990::0:0:0;
+}
+

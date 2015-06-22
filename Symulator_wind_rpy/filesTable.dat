@@ -1,0 +1,10 @@
+I-Logix-RPY-Archive version 8.8.0 * 6118532
+
+- filesTable = { IRPYRawContainer 
+	- size = 3;
+	- value = "Symulator_wind.rpy" ""
+	"Symulator_wind_rpy\\Default.sbs" "Default"
+	"Symulator_wind_rpy\\DefaultComponent.cmp" "DefaultComponent"
+	
+}
+
