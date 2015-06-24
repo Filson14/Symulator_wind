@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: anim
 	Model Element	: Winda
-//!	Generated Date	: Mon, 22, Jun 2015 
+//!	Generated Date	: Wed, 24, Jun 2015 
 	File Path	: DefaultComponent/anim/Default/Winda.java
 *********************************************************************/
 
@@ -36,8 +36,6 @@ public class Winda implements Animated {
     
     protected int obecnePietro = 0;		//## attribute obecnePietro 
     
-    protected PanelWindy itsPanelWindy;		//## link itsPanelWindy 
-    
     protected Sterownik itsSterownik;		//## link itsSterownik 
     
     
@@ -54,7 +52,6 @@ public class Winda implements Animated {
                    new ArgData(int.class, "id", AnimInstance.animToString(id))
                });
         
-        initRelations();
         //#[ operation Winda(int) 
         System.out.println("Buduje winde nr " + id);            
         this.id = id;
@@ -72,7 +69,6 @@ public class Winda implements Animated {
                new ArgData[] {
                });
         
-        initRelations();
         }
         finally {
             animInstance().notifyMethodExit();
@@ -98,48 +94,6 @@ public class Winda implements Animated {
     //## auto_generated 
     public void setObecnePietro(int p_obecnePietro) {
         obecnePietro = p_obecnePietro;
-    }
-    
-    //## auto_generated 
-    public PanelWindy getItsPanelWindy() {
-        return itsPanelWindy;
-    }
-    
-    //## auto_generated 
-    public void __setItsPanelWindy(PanelWindy p_PanelWindy) {
-        itsPanelWindy = p_PanelWindy;
-        if(p_PanelWindy != null)
-            {
-                animInstance().notifyRelationAdded("itsPanelWindy", p_PanelWindy);
-            }
-        else
-            {
-                animInstance().notifyRelationCleared("itsPanelWindy");
-            }
-    }
-    
-    //## auto_generated 
-    public void _setItsPanelWindy(PanelWindy p_PanelWindy) {
-        if(itsPanelWindy != null)
-            {
-                itsPanelWindy.__setItsWinda(null);
-            }
-        __setItsPanelWindy(p_PanelWindy);
-    }
-    
-    //## auto_generated 
-    public PanelWindy newItsPanelWindy() {
-        itsPanelWindy = new PanelWindy();
-        itsPanelWindy._setItsWinda(this);
-        animInstance().notifyRelationAdded("itsPanelWindy", itsPanelWindy);
-        return itsPanelWindy;
-    }
-    
-    //## auto_generated 
-    public void deleteItsPanelWindy() {
-        itsPanelWindy.__setItsWinda(null);
-        animInstance().notifyRelationRemoved("itsPanelWindy", itsPanelWindy);
-        itsPanelWindy=null;
     }
     
     //## auto_generated 
@@ -184,11 +138,6 @@ public class Winda implements Animated {
         itsSterownik = null;
     }
     
-    //## auto_generated 
-    protected void initRelations() {
-        itsPanelWindy = newItsPanelWindy();
-    }
-    
     //#[ ignore
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public AnimClass getAnimClass() { 
@@ -220,7 +169,6 @@ public class Winda implements Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
-        msg.add("itsPanelWindy", true, true, itsPanelWindy);
         msg.add("itsSterownik", false, true, itsSterownik);
     }
     /** An inner class added as instrumentation for animation */

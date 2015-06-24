@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Winda
-//!	Generated Date	: Mon, 22, Jun 2015 
+//!	Generated Date	: Wed, 24, Jun 2015 
 	File Path	: DefaultComponent/DefaultConfig/Default/Winda.java
 *********************************************************************/
 
@@ -25,8 +25,6 @@ public class Winda {
     
     protected int obecnePietro = 0;		//## attribute obecnePietro 
     
-    protected PanelWindy itsPanelWindy;		//## link itsPanelWindy 
-    
     protected Sterownik itsSterownik;		//## link itsSterownik 
     
     
@@ -37,7 +35,6 @@ public class Winda {
     */
     //## operation Winda(int) 
     public  Winda(int id) {
-        initRelations();
         //#[ operation Winda(int) 
         System.out.println("Buduje winde nr " + id);            
         this.id = id;
@@ -45,7 +42,6 @@ public class Winda {
     }
     //## auto_generated 
     public  Winda() {
-        initRelations();
     }
     
     //## auto_generated 
@@ -66,38 +62,6 @@ public class Winda {
     //## auto_generated 
     public void setObecnePietro(int p_obecnePietro) {
         obecnePietro = p_obecnePietro;
-    }
-    
-    //## auto_generated 
-    public PanelWindy getItsPanelWindy() {
-        return itsPanelWindy;
-    }
-    
-    //## auto_generated 
-    public void __setItsPanelWindy(PanelWindy p_PanelWindy) {
-        itsPanelWindy = p_PanelWindy;
-    }
-    
-    //## auto_generated 
-    public void _setItsPanelWindy(PanelWindy p_PanelWindy) {
-        if(itsPanelWindy != null)
-            {
-                itsPanelWindy.__setItsWinda(null);
-            }
-        __setItsPanelWindy(p_PanelWindy);
-    }
-    
-    //## auto_generated 
-    public PanelWindy newItsPanelWindy() {
-        itsPanelWindy = new PanelWindy();
-        itsPanelWindy._setItsWinda(this);
-        return itsPanelWindy;
-    }
-    
-    //## auto_generated 
-    public void deleteItsPanelWindy() {
-        itsPanelWindy.__setItsWinda(null);
-        itsPanelWindy=null;
     }
     
     //## auto_generated 
@@ -131,11 +95,6 @@ public class Winda {
     //## auto_generated 
     public void _clearItsSterownik() {
         itsSterownik = null;
-    }
-    
-    //## auto_generated 
-    protected void initRelations() {
-        itsPanelWindy = newItsPanelWindy();
     }
     
 }

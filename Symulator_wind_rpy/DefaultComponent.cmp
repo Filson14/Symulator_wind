@@ -182,7 +182,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 		}
 	}
 	- HandlesInMe = { IRPYRawContainer 
-		- size = 3;
+		- size = 2;
 		- value = 
 		{ IHandle 
 			- _m2Class = "ISubsystem";
@@ -199,14 +199,6 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 			- _class = "";
 			- _name = "JavaDocProfile";
 			- _id = GUID 19700e28-456f-4c97-a19c-b95dcb3e9dff;
-		}
-		{ IHandle 
-			- _m2Class = "ISubsystem";
-			- _filename = "e:\\Program Files\\IBM\\Rational\\Rhapsody\\8.0.4\\Share\\LangJava\\JDKRefModel\\JDKModel_rpy\\java.sbs";
-			- _subsystem = "";
-			- _class = "";
-			- _name = "java";
-			- _id = GUID 108dc565-5d8e-486b-a11b-860040b36752;
 		}
 	}
 	- VariationPoints = { IRPYRawContainer 

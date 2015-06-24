@@ -10,8 +10,8 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -31,9 +31,9 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _id = GUID d587e6f9-d643-48ec-8674-e0f680bde59f;
 			}
 			- _UpLeft = 0 -18 ;
-			- _DownRight = 926 390 ;
+			- _DownRight = 1143 512 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 0;
+			- m_nDiagramIndex = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
@@ -44,30 +44,30 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -30;
-				- m_nLeft = 50;
-				- m_nTop = 50;
-				- m_nRight = 1225;
-				- m_nBottom = 610;
+				- m_nLeft = 75;
+				- m_nTop = 75;
+				- m_nRight = 1300;
+				- m_nBottom = 547;
 			}
-			- _wasOpenedOnCloseProject = 0;
+			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
-				- _m2Class = "IUCDiagram";
+				- _m2Class = "IStateChartDiagram";
 				- _filename = "Default.sbs";
 				- _subsystem = "Default";
-				- _class = "";
-				- _name = "przypadki_uzycia";
-				- _id = GUID 3a6904c8-1e83-4f08-b7ac-052240275a17;
+				- _class = "Sterownik";
+				- _name = "StatechartDiagram";
+				- _id = GUID 0c127e6e-a95f-4e24-b074-779d0dd13207;
 			}
-			- _UpLeft = 0 40 ;
-			- _DownRight = 1138 541 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1188 413 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 2;
-				- m_showCmd = 3;
+				- m_nFlags = 0;
+				- m_showCmd = 1;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -87,9 +87,9 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _id = GUID 28d79ea2-0c8c-48e0-ab0b-79e11c73daf4;
 			}
 			- _UpLeft = 0 0 ;
-			- _DownRight = 1288 562 ;
+			- _DownRight = 1044 459 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 2;
 		}
 	}
 	- _fullName = "E:\\Filson\\Dropbox\\Studia\\Semestr 6\\Systemy Czasu Rzeczywistego\\Projekt\\Symulator_wind\\Symulator_wind";

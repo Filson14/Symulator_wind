@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: anim
 	Model Element	: anim
-//!	Generated Date	: Mon, 22, Jun 2015 
+//!	Generated Date	: Wed, 24, Jun 2015 
 	File Path	: DefaultComponent/anim/MainDefaultComponent.java
 *********************************************************************/
 
@@ -32,6 +32,16 @@ public class MainDefaultComponent {
       // Registering Events 
       try {
         
+            Class.forName("Default.evCzwarteDol");
+            Class.forName("Default.evCzwarteGora");
+            Class.forName("Default.evDrugieDol");
+            Class.forName("Default.evDrugieGora");
+            Class.forName("Default.evParterGora");
+            Class.forName("Default.evPiateDol");
+            Class.forName("Default.evPierwszeDol");
+            Class.forName("Default.evPierwszeGora");
+            Class.forName("Default.evTrzecieDol");
+            Class.forName("Default.evTrzecieGora");
     
         // Registering Static Classes 
         
@@ -49,7 +59,8 @@ public class MainDefaultComponent {
     public static void main(String[] args) {
         RiJOXF.Init(null, 0, 0, true, args);
         MainDefaultComponent initializer_DefaultComponent = new MainDefaultComponent();
-        p_Sterownik = new Sterownik();
+        p_Sterownik = new Sterownik(RiJMainThread.instance());
+        p_Sterownik.startBehavior();
         //#[ configuration DefaultComponent::anim 
         //#]
         RiJOXF.Start();
