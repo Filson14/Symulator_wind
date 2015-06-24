@@ -1,3 +1,4 @@
 [Op Calls]
 [Events]
+Sterownik[0]->itsWinda_1->GEN(evUruchom())`Winda
 [Breakpoints]

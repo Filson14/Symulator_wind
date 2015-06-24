@@ -11,8 +11,6 @@
 package Default;
 
 //## auto_generated
-import java.util.*;
-//## auto_generated
 import com.ibm.rational.rhapsody.oxf.*;
 //## auto_generated
 import com.ibm.rational.rhapsody.animation.*;
@@ -44,21 +42,30 @@ public class Sterownik implements RiJStateConcept, Animated {
     
     protected int iloscWind = 2;		//## attribute iloscWind 
     
-    protected ArrayList<Winda> itsWinda = itsWinda = new ArrayList<Winda>();		//## link itsWinda 
+    protected Winda itsWinda_1;		//## classInstance itsWinda_1 
+    
+    protected Winda itsWinda_2;		//## classInstance itsWinda_2 
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int TrzecieGora=1;
-    public static final int TrzecieDol=2;
-    public static final int start=3;
-    public static final int PierwszeGora=4;
-    public static final int PierwszeDol=5;
-    public static final int PiateDol=6;
-    public static final int ParterGora=7;
-    public static final int DrugieGora=8;
-    public static final int DrugieDol=9;
-    public static final int CzwarteGora=10;
-    public static final int CzwarteDol=11;
+    public static final int winda1_btn5=1;
+    public static final int winda1_btn4=2;
+    public static final int winda1_btn3=3;
+    public static final int winda1_btn2=4;
+    public static final int winda1_btn1=5;
+    public static final int winda1_btn0=6;
+    public static final int TrzecieGora=7;
+    public static final int TrzecieDol=8;
+    public static final int state_15=9;
+    public static final int start=10;
+    public static final int PierwszeGora=11;
+    public static final int PierwszeDol=12;
+    public static final int PiateDol=13;
+    public static final int ParterGora=14;
+    public static final int DrugieGora=15;
+    public static final int DrugieDol=16;
+    public static final int CzwarteGora=17;
+    public static final int CzwarteDol=18;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -120,13 +127,47 @@ public class Sterownik implements RiJStateConcept, Animated {
                });
         
         reactive = new Reactive(p_thread);
+        initRelations(p_thread);
         //#[ operation Sterownik() 
         System.out.println("Start sterownika");
                                                 
-        for(int i=0; i<iloscWind; i++){
-        	addItsWinda(new Winda(i));
-        }                                         
+        //for(int i=0; i<iloscWind; i++){
+        //	addItsWinda(new Winda(i));
+        //}                                         
         
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * @param pietro
+    */
+    //## operation zamowPrzejazdWGore(int) 
+    public void zamowPrzejazdWGore(int pietro) {
+        try {
+            animInstance().notifyMethodEntered("zamowPrzejazdWGore",
+               new ArgData[] {
+                   new ArgData(int.class, "pietro", AnimInstance.animToString(pietro))
+               });
+        
+        //#[ operation zamowPrzejazdWGore(int) 
+        System.out.println("Wezwanie z pietra " + pietro + ", jazda w gore.");
+        /*
+        Winda winda1 = itsWinda.get(0);
+        Winda winda2 = itsWinda.get(1);
+        
+        if(!winda1.jestPrzystanekWGore(pietro) || !winda2.jestPrzystanekWGore(pietro)){
+        	//if(pietro > winda1.obecnePietro && winda1.kierunekWGore)
+        
+        } 
+        
+        */
+        
+        itsWinda_1.dodajStopWGore(pietro);
         //#]
         }
         finally {
@@ -156,68 +197,53 @@ public class Sterownik implements RiJStateConcept, Animated {
     }
     
     //## auto_generated 
-    public ListIterator<Winda> getItsWinda() {
-        ListIterator<Winda> iter = itsWinda.listIterator();
-        return iter;
+    public Winda getItsWinda_1() {
+        return itsWinda_1;
     }
     
     //## auto_generated 
-    public void _addItsWinda(Winda p_Winda) {
-        if(p_Winda != null)
-            {
-                animInstance().notifyRelationAdded("itsWinda", p_Winda);
-            }
-        else
-            {
-                animInstance().notifyRelationCleared("itsWinda");
-            }
-        itsWinda.add(0, p_Winda);
+    public Winda newItsWinda_1(RiJThread p_thread) {
+        itsWinda_1 = new Winda(p_thread);
+        animInstance().notifyRelationAdded("itsWinda_1", itsWinda_1);
+        return itsWinda_1;
     }
     
     //## auto_generated 
-    public void addItsWinda(Winda p_Winda) {
-        if(p_Winda != null)
-            {
-                p_Winda._setItsSterownik(this);
-            }
-        _addItsWinda(p_Winda);
+    public void deleteItsWinda_1() {
+        animInstance().notifyRelationRemoved("itsWinda_1", itsWinda_1);
+        itsWinda_1=null;
     }
     
     //## auto_generated 
-    public void _removeItsWinda(Winda p_Winda) {
-        animInstance().notifyRelationRemoved("itsWinda", p_Winda);
-        itsWinda.remove(p_Winda);
+    public Winda getItsWinda_2() {
+        return itsWinda_2;
     }
     
     //## auto_generated 
-    public void removeItsWinda(Winda p_Winda) {
-        if(p_Winda != null)
-            {
-                p_Winda.__setItsSterownik(null);
-            }
-        _removeItsWinda(p_Winda);
+    public Winda newItsWinda_2(RiJThread p_thread) {
+        itsWinda_2 = new Winda(p_thread);
+        animInstance().notifyRelationAdded("itsWinda_2", itsWinda_2);
+        return itsWinda_2;
     }
     
     //## auto_generated 
-    public void _clearItsWinda() {
-        animInstance().notifyRelationCleared("itsWinda");
-        itsWinda.clear();
+    public void deleteItsWinda_2() {
+        animInstance().notifyRelationRemoved("itsWinda_2", itsWinda_2);
+        itsWinda_2=null;
     }
     
     //## auto_generated 
-    public void clearItsWinda() {
-        ListIterator<Winda> iter = itsWinda.listIterator();
-        while (iter.hasNext()){
-            (itsWinda.get(iter.nextIndex()))._clearItsSterownik();
-            iter.next();
-        }
-        _clearItsWinda();
+    protected void initRelations(RiJThread p_thread) {
+        itsWinda_1 = newItsWinda_1(p_thread);
+        itsWinda_2 = newItsWinda_2(p_thread);
     }
     
     //## auto_generated 
     public boolean startBehavior() {
-        boolean done = false;
-        done = reactive.startBehavior();
+        boolean done = true;
+        done &= itsWinda_1.startBehavior();
+        done &= itsWinda_2.startBehavior();
+        done &= reactive.startBehavior();
         return done;
     }
     
@@ -310,6 +336,41 @@ public class Sterownik implements RiJStateConcept, Animated {
                     PiateDol_add(animStates);
                 }
                 break;
+                case state_15:
+                {
+                    state_15_add(animStates);
+                }
+                break;
+                case winda1_btn0:
+                {
+                    winda1_btn0_add(animStates);
+                }
+                break;
+                case winda1_btn1:
+                {
+                    winda1_btn1_add(animStates);
+                }
+                break;
+                case winda1_btn2:
+                {
+                    winda1_btn2_add(animStates);
+                }
+                break;
+                case winda1_btn3:
+                {
+                    winda1_btn3_add(animStates);
+                }
+                break;
+                case winda1_btn4:
+                {
+                    winda1_btn4_add(animStates);
+                }
+                break;
+                case winda1_btn5:
+                {
+                    winda1_btn5_add(animStates);
+                }
+                break;
                 default:
                     break;
             }
@@ -326,11 +387,131 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(rootState_active == start)
+            switch (rootState_active) {
+                case start:
                 {
                     res = start_takeEvent(id);
                 }
+                break;
+                case ParterGora:
+                {
+                    res = ParterGora_takeEvent(id);
+                }
+                break;
+                case PierwszeGora:
+                {
+                    res = PierwszeGora_takeEvent(id);
+                }
+                break;
+                case PierwszeDol:
+                {
+                    res = PierwszeDol_takeEvent(id);
+                }
+                break;
+                case DrugieGora:
+                {
+                    res = DrugieGora_takeEvent(id);
+                }
+                break;
+                case DrugieDol:
+                {
+                    res = DrugieDol_takeEvent(id);
+                }
+                break;
+                case TrzecieGora:
+                {
+                    res = TrzecieGora_takeEvent(id);
+                }
+                break;
+                case TrzecieDol:
+                {
+                    res = TrzecieDol_takeEvent(id);
+                }
+                break;
+                case CzwarteGora:
+                {
+                    res = CzwarteGora_takeEvent(id);
+                }
+                break;
+                case CzwarteDol:
+                {
+                    res = CzwarteDol_takeEvent(id);
+                }
+                break;
+                case PiateDol:
+                {
+                    res = PiateDol_takeEvent(id);
+                }
+                break;
+                case state_15:
+                {
+                    res = state_15_takeEvent(id);
+                }
+                break;
+                case winda1_btn0:
+                {
+                    res = winda1_btn0_takeEvent(id);
+                }
+                break;
+                case winda1_btn1:
+                {
+                    res = winda1_btn1_takeEvent(id);
+                }
+                break;
+                case winda1_btn2:
+                {
+                    res = winda1_btn2_takeEvent(id);
+                }
+                break;
+                case winda1_btn3:
+                {
+                    res = winda1_btn3_takeEvent(id);
+                }
+                break;
+                case winda1_btn4:
+                {
+                    res = winda1_btn4_takeEvent(id);
+                }
+                break;
+                case winda1_btn5:
+                {
+                    res = winda1_btn5_takeEvent(id);
+                }
+                break;
+                default:
+                    break;
+            }
             return res;
+        }
+        
+        //## statechart_method 
+        public void winda1_btn5_add(AnimStates animStates) {
+            animStates.add("ROOT.winda1_btn5");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn4_add(AnimStates animStates) {
+            animStates.add("ROOT.winda1_btn4");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn3_add(AnimStates animStates) {
+            animStates.add("ROOT.winda1_btn3");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn2_add(AnimStates animStates) {
+            animStates.add("ROOT.winda1_btn2");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn1_add(AnimStates animStates) {
+            animStates.add("ROOT.winda1_btn1");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn0_add(AnimStates animStates) {
+            animStates.add("ROOT.winda1_btn0");
         }
         
         //## statechart_method 
@@ -341,6 +522,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void TrzecieDol_add(AnimStates animStates) {
             animStates.add("ROOT.TrzecieDol");
+        }
+        
+        //## statechart_method 
+        public void state_15_add(AnimStates animStates) {
+            animStates.add("ROOT.state_15");
         }
         
         //## statechart_method 
@@ -397,18 +583,32 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void CzwarteGoraEnter() {
             //#[ state CzwarteGora.(Entry) 
-             System.out.println("Wezwanie: Czwarte, do gory");
+             System.out.println("Wezwanie: Czwarte, do gory");     
+             itsWinda_1.dodajStopWGore(4);
             //#]
         }
         
         //## statechart_method 
         public void DrugieDol_exit() {
+            popNullConfig();
             DrugieDolExit();
             animInstance().notifyStateExited("ROOT.DrugieDol");
         }
         
         //## statechart_method 
+        public int DrugieGoraTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("13");
+            DrugieGora_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("13");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void DrugieGora_exit() {
+            popNullConfig();
             DrugieGoraExit();
             animInstance().notifyStateExited("ROOT.DrugieGora");
         }
@@ -416,6 +616,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void DrugieGora_enter() {
             animInstance().notifyStateEntered("ROOT.DrugieGora");
+            pushNullConfig();
             rootState_subState = DrugieGora;
             rootState_active = DrugieGora;
             DrugieGoraEnter();
@@ -429,6 +630,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void TrzecieGora_exit() {
+            popNullConfig();
             TrzecieGoraExit();
             animInstance().notifyStateExited("ROOT.TrzecieGora");
         }
@@ -436,13 +638,19 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void TrzecieGora_enter() {
             animInstance().notifyStateEntered("ROOT.TrzecieGora");
+            pushNullConfig();
             rootState_subState = TrzecieGora;
             rootState_active = TrzecieGora;
             TrzecieGoraEnter();
         }
         
         //## statechart_method 
+        public void winda1_btn5Exit() {
+        }
+        
+        //## statechart_method 
         public void CzwarteDol_exit() {
+            popNullConfig();
             CzwarteDolExit();
             animInstance().notifyStateExited("ROOT.CzwarteDol");
         }
@@ -450,6 +658,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public int PiateDol_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = PiateDolTakeNull();
+                }
+            
             return res;
         }
         
@@ -465,20 +678,34 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void PiateDolEnter() {
             //#[ state PiateDol.(Entry) 
-             System.out.println("Wezwanie: Piate, na dol");
+             System.out.println("Wezwanie: Piate, na dol");   
+             itsWinda_1.dodajStopWDol(5);
             //#]
         }
         
         //## statechart_method 
         public void PierwszeDol_enter() {
             animInstance().notifyStateEntered("ROOT.PierwszeDol");
+            pushNullConfig();
             rootState_subState = PierwszeDol;
             rootState_active = PierwszeDol;
             PierwszeDolEnter();
         }
         
         //## statechart_method 
+        public void winda1_btn0_entDef() {
+            winda1_btn0_enter();
+        }
+        
+        //## statechart_method 
+        public int winda1_btn1_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
         public void CzwarteGora_exit() {
+            popNullConfig();
             CzwarteGoraExit();
             animInstance().notifyStateExited("ROOT.CzwarteGora");
         }
@@ -486,6 +713,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void DrugieDol_enter() {
             animInstance().notifyStateEntered("ROOT.DrugieDol");
+            pushNullConfig();
             rootState_subState = DrugieDol;
             rootState_active = DrugieDol;
             DrugieDolEnter();
@@ -499,7 +727,8 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void PierwszeDolEnter() {
             //#[ state PierwszeDol.(Entry) 
-            System.out.println("Wezwanie: Pierwsze, na dol");
+            System.out.println("Wezwanie: Pierwsze, na dol");   
+            itsWinda_1.dodajStopWDol(1);
             //#]
         }
         
@@ -526,11 +755,34 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int state_15_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = state_15TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
         public void TrzecieDol_enter() {
             animInstance().notifyStateEntered("ROOT.TrzecieDol");
+            pushNullConfig();
             rootState_subState = TrzecieDol;
             rootState_active = TrzecieDol;
             TrzecieDolEnter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn3_entDef() {
+            winda1_btn3_enter();
+        }
+        
+        //## statechart_method 
+        public int winda1_btn4_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
         }
         
         //## statechart_method 
@@ -540,6 +792,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public int CzwarteGora_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = CzwarteGoraTakeNull();
+                }
+            
             return res;
         }
         
@@ -558,6 +815,26 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public int state_15TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("16");
+            state_15_exit();
+            start_entDef();
+            animInstance().notifyTransitionEnded("16");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_15_enter() {
+            animInstance().notifyStateEntered("ROOT.state_15");
+            pushNullConfig();
+            rootState_subState = state_15;
+            rootState_active = state_15;
+            state_15Enter();
+        }
+        
+        //## statechart_method 
         public void TrzecieDol_entDef() {
             TrzecieDol_enter();
         }
@@ -565,6 +842,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void ParterGora_enter() {
             animInstance().notifyStateEntered("ROOT.ParterGora");
+            pushNullConfig();
             rootState_subState = ParterGora;
             rootState_active = ParterGora;
             ParterGoraEnter();
@@ -572,6 +850,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void PiateDol_exit() {
+            popNullConfig();
             PiateDolExit();
             animInstance().notifyStateExited("ROOT.PiateDol");
         }
@@ -588,8 +867,20 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_15Enter() {
+            //#[ state state_15.(Entry) 
+              itsWinda_1.gen(new evUruchom());
+            //#]
+        }
+        
+        //## statechart_method 
+        public void winda1_btn5Enter() {
+        }
+        
+        //## statechart_method 
         public void CzwarteDol_enter() {
             animInstance().notifyStateEntered("ROOT.CzwarteDol");
+            pushNullConfig();
             rootState_subState = CzwarteDol;
             rootState_active = CzwarteDol;
             CzwarteDolEnter();
@@ -602,6 +893,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void PierwszeDol_exit() {
+            popNullConfig();
             PierwszeDolExit();
             animInstance().notifyStateExited("ROOT.PierwszeDol");
         }
@@ -629,6 +921,10 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void winda1_btn4Enter() {
+        }
+        
+        //## statechart_method 
         public int rootState_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             return res;
@@ -646,6 +942,101 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void winda1_btn0_enter() {
+            animInstance().notifyStateEntered("ROOT.winda1_btn0");
+            rootState_subState = winda1_btn0;
+            rootState_active = winda1_btn0;
+            winda1_btn0Enter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn3Enter() {
+        }
+        
+        //## statechart_method 
+        public int CzwarteDolTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("20");
+            CzwarteDol_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("20");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int PiateDolTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("21");
+            PiateDol_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("21");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void state_15_exit() {
+            popNullConfig();
+            state_15Exit();
+            animInstance().notifyStateExited("ROOT.state_15");
+        }
+        
+        //## statechart_method 
+        public int TrzecieDolTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("19");
+            TrzecieDol_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("19");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int winda1_btn0_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda1_btn1_enter() {
+            animInstance().notifyStateEntered("ROOT.winda1_btn1");
+            rootState_subState = winda1_btn1;
+            rootState_active = winda1_btn1;
+            winda1_btn1Enter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn1_entDef() {
+            winda1_btn1_enter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn2_enter() {
+            animInstance().notifyStateEntered("ROOT.winda1_btn2");
+            rootState_subState = winda1_btn2;
+            rootState_active = winda1_btn2;
+            winda1_btn2Enter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn2Enter() {
+        }
+        
+        //## statechart_method 
+        public int winda1_btn3_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda1_btn5_exit() {
+            winda1_btn5Exit();
+            animInstance().notifyStateExited("ROOT.winda1_btn5");
+        }
+        
+        //## statechart_method 
         public void rootState_enter() {
             animInstance().notifyStateEntered("ROOT");
             rootStateEnter();
@@ -658,18 +1049,44 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public int DrugieDol_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = DrugieDolTakeNull();
+                }
+            
             return res;
         }
         
         //## statechart_method 
         public int DrugieGora_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = DrugieGoraTakeNull();
+                }
+            
             return res;
         }
         
         //## statechart_method 
         public int PierwszeDol_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = PierwszeDolTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int PierwszeGoraTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("12");
+            PierwszeGora_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("12");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
@@ -678,8 +1095,54 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void winda1_btn1Enter() {
+        }
+        
+        //## statechart_method 
+        public void winda1_btn3_enter() {
+            animInstance().notifyStateEntered("ROOT.winda1_btn3");
+            rootState_subState = winda1_btn3;
+            rootState_active = winda1_btn3;
+            winda1_btn3Enter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn4_exit() {
+            winda1_btn4Exit();
+            animInstance().notifyStateExited("ROOT.winda1_btn4");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn4_entDef() {
+            winda1_btn4_enter();
+        }
+        
+        //## statechart_method 
+        public int DrugieDolTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("18");
+            DrugieDol_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("18");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int ParterGoraTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("11");
+            ParterGora_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("11");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void PierwszeGora_enter() {
             animInstance().notifyStateEntered("ROOT.PierwszeGora");
+            pushNullConfig();
             rootState_subState = PierwszeGora;
             rootState_active = PierwszeGora;
             PierwszeGoraEnter();
@@ -688,6 +1151,59 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public int TrzecieGora_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = TrzecieGoraTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int TrzecieGoraTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("14");
+            TrzecieGora_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("14");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda1_btn0Enter() {
+        }
+        
+        //## statechart_method 
+        public void winda1_btn3_exit() {
+            winda1_btn3Exit();
+            animInstance().notifyStateExited("ROOT.winda1_btn3");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn4_enter() {
+            animInstance().notifyStateEntered("ROOT.winda1_btn4");
+            rootState_subState = winda1_btn4;
+            rootState_active = winda1_btn4;
+            winda1_btn4Enter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn5_enter() {
+            animInstance().notifyStateEntered("ROOT.winda1_btn5");
+            rootState_subState = winda1_btn5;
+            rootState_active = winda1_btn5;
+            winda1_btn5Enter();
+        }
+        
+        //## statechart_method 
+        public int CzwarteGoraTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("15");
+            CzwarteGora_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("15");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
@@ -703,6 +1219,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public int PierwszeGora_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = PierwszeGoraTakeNull();
+                }
+            
             return res;
         }
         
@@ -754,15 +1275,26 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_15Exit() {
+        }
+        
+        //## statechart_method 
         public void TrzecieDolEnter() {
             //#[ state TrzecieDol.(Entry) 
-            System.out.println("Wezwanie: Trzecie, na dol");
+            System.out.println("Wezwanie: Trzecie, na dol");             
+            itsWinda_1.dodajStopWDol(3);
             //#]
         }
         
         //## statechart_method 
         public void TrzecieGora_entDef() {
             TrzecieGora_enter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn2_exit() {
+            winda1_btn2Exit();
+            animInstance().notifyStateExited("ROOT.winda1_btn2");
         }
         
         //## statechart_method 
@@ -780,11 +1312,23 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void ParterGoraEnter() {
             //#[ state ParterGora.(Entry) 
             System.out.println("Wezwanie: Parter, do gory");
+            itsWinda_1.dodajStopWGore(0);
             //#]
         }
         
         //## statechart_method 
         public void PiateDolExit() {
+        }
+        
+        //## statechart_method 
+        public int PierwszeDolTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("17");
+            PierwszeDol_exit();
+            state_15_entDef();
+            animInstance().notifyTransitionEnded("17");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -800,6 +1344,16 @@ public class Sterownik implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void TrzecieDolExit() {
+        }
+        
+        //## statechart_method 
+        public void winda1_btn0Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda1_btn1_exit() {
+            winda1_btn1Exit();
+            animInstance().notifyStateExited("ROOT.winda1_btn1");
         }
         
         //## statechart_method 
@@ -824,6 +1378,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void PierwszeGoraEnter() {
             //#[ state PierwszeGora.(Entry) 
             System.out.println("Wezwanie: Pierwsze, do gory");
+            itsWinda_1.dodajStopWGore(1);
             //#]
         }
         
@@ -850,28 +1405,55 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void state_15_entDef() {
+            state_15_enter();
+        }
+        
+        //## statechart_method 
         public int TrzecieDol_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = TrzecieDolTakeNull();
+                }
+            
             return res;
+        }
+        
+        //## statechart_method 
+        public void winda1_btn0_exit() {
+            winda1_btn0Exit();
+            animInstance().notifyStateExited("ROOT.winda1_btn0");
+        }
+        
+        //## statechart_method 
+        public void winda1_btn1Exit() {
         }
         
         //## statechart_method 
         public void DrugieDolEnter() {
             //#[ state DrugieDol.(Entry) 
-             System.out.println("Wezwanie: Drugie, na dol");
+             System.out.println("Wezwanie: Drugie, na dol");  
+             itsWinda_1.dodajStopWDol(2);
             //#]
         }
         
         //## statechart_method 
         public void DrugieGoraEnter() {
             //#[ state DrugieGora.(Entry) 
-            System.out.println("Wezwanie: Drugie, do gory");
+            System.out.println("Wezwanie: Drugie, do gory"); 
+            itsWinda_1.dodajStopWGore(2);
             //#]
         }
         
         //## statechart_method 
         public int ParterGora_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = ParterGoraTakeNull();
+                }
+            
             return res;
         }
         
@@ -885,6 +1467,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void TrzecieDol_exit() {
+            popNullConfig();
             TrzecieDolExit();
             animInstance().notifyStateExited("ROOT.TrzecieDol");
         }
@@ -893,7 +1476,29 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void TrzecieGoraEnter() {
             //#[ state TrzecieGora.(Entry) 
              System.out.println("Wezwanie: Trzecie, do gory");
+            itsWinda_1.dodajStopWGore(3);
             //#]
+        }
+        
+        //## statechart_method 
+        public int winda1_btn2_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda1_btn2Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda1_btn2_entDef() {
+            winda1_btn2_enter();
+        }
+        
+        //## statechart_method 
+        public int winda1_btn5_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
         }
         
         //## statechart_method 
@@ -903,18 +1508,25 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public int CzwarteDol_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = CzwarteDolTakeNull();
+                }
+            
             return res;
         }
         
         //## statechart_method 
         public void CzwarteDolEnter() {
             //#[ state CzwarteDol.(Entry) 
-               System.out.println("Wezwanie: Czwarte, na dol");
+               System.out.println("Wezwanie: Czwarte, na dol");    
+               itsWinda_1.dodajStopWDol(4);
             //#]
         }
         
         //## statechart_method 
         public void ParterGora_exit() {
+            popNullConfig();
             ParterGoraExit();
             animInstance().notifyStateExited("ROOT.ParterGora");
         }
@@ -922,6 +1534,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void PiateDol_enter() {
             animInstance().notifyStateEntered("ROOT.PiateDol");
+            pushNullConfig();
             rootState_subState = PiateDol;
             rootState_active = PiateDol;
             PiateDolEnter();
@@ -944,8 +1557,18 @@ public class Sterownik implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void winda1_btn3Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda1_btn5_entDef() {
+            winda1_btn5_enter();
+        }
+        
+        //## statechart_method 
         public void CzwarteGora_enter() {
             animInstance().notifyStateEntered("ROOT.CzwarteGora");
+            pushNullConfig();
             rootState_subState = CzwarteGora;
             rootState_active = CzwarteGora;
             CzwarteGoraEnter();
@@ -953,6 +1576,7 @@ public class Sterownik implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void PierwszeGora_exit() {
+            popNullConfig();
             PierwszeGoraExit();
             animInstance().notifyStateExited("ROOT.PierwszeGora");
         }
@@ -963,6 +1587,10 @@ public class Sterownik implements RiJStateConcept, Animated {
             rootState_subState = start;
             rootState_active = start;
             startEnter();
+        }
+        
+        //## statechart_method 
+        public void winda1_btn4Exit() {
         }
         
         /**  methods added just for design level debugging instrumentation */
@@ -1026,7 +1654,8 @@ public class Sterownik implements RiJStateConcept, Animated {
     /**  see com.ibm.rational.rhapsody.animation.Animated interface */
     public void addRelations(AnimRelations msg) {
         
-        msg.add("itsWinda", false, false, itsWinda);
+        msg.add("itsWinda_1", true, true, itsWinda_1);
+        msg.add("itsWinda_2", true, true, itsWinda_2);
     }
     /** An inner class added as instrumentation for animation */
     public class Animate extends AnimInstance { 

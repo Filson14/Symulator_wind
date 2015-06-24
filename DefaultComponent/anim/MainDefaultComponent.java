@@ -42,6 +42,7 @@ public class MainDefaultComponent {
             Class.forName("Default.evPierwszeGora");
             Class.forName("Default.evTrzecieDol");
             Class.forName("Default.evTrzecieGora");
+            Class.forName("Default.evUruchom");
     
         // Registering Static Classes 
         
