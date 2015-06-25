@@ -51,8 +51,11 @@ public class Winda implements RiJStateConcept, Animated {
     //#[ ignore 
     public static final int RiJNonState=0;
     public static final int pietro=1;
-    public static final int jazda=2;
-    public static final int bezczynny=3;
+    public static final int kierunekUstalony=2;
+    public static final int jedz_w_gore=3;
+    public static final int jedz_w_dol=4;
+    public static final int jazda=5;
+    public static final int bezczynny=6;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -487,6 +490,21 @@ public class Winda implements RiJStateConcept, Animated {
                     jazda_add(animStates);
                 }
                 break;
+                case jedz_w_gore:
+                {
+                    jedz_w_gore_add(animStates);
+                }
+                break;
+                case jedz_w_dol:
+                {
+                    jedz_w_dol_add(animStates);
+                }
+                break;
+                case kierunekUstalony:
+                {
+                    kierunekUstalony_add(animStates);
+                }
+                break;
                 default:
                     break;
             }
@@ -519,6 +537,21 @@ public class Winda implements RiJStateConcept, Animated {
                     res = jazda_takeEvent(id);
                 }
                 break;
+                case jedz_w_gore:
+                {
+                    res = jedz_w_gore_takeEvent(id);
+                }
+                break;
+                case jedz_w_dol:
+                {
+                    res = jedz_w_dol_takeEvent(id);
+                }
+                break;
+                case kierunekUstalony:
+                {
+                    res = kierunekUstalony_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
@@ -528,6 +561,21 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public void pietro_add(AnimStates animStates) {
             animStates.add("ROOT.pietro");
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalony_add(AnimStates animStates) {
+            animStates.add("ROOT.kierunekUstalony");
+        }
+        
+        //## statechart_method 
+        public void jedz_w_gore_add(AnimStates animStates) {
+            animStates.add("ROOT.jedz_w_gore");
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dol_add(AnimStates animStates) {
+            animStates.add("ROOT.jedz_w_dol");
         }
         
         //## statechart_method 
@@ -548,6 +596,29 @@ public class Winda implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void bezczynnyExit() {
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dol_enter() {
+            animInstance().notifyStateEntered("ROOT.jedz_w_dol");
+            pushNullConfig();
+            rootState_subState = jedz_w_dol;
+            rootState_active = jedz_w_dol;
+            jedz_w_dolEnter();
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dol_entDef() {
+            jedz_w_dol_enter();
+        }
+        
+        //## statechart_method 
+        public void jedz_w_gore_enter() {
+            animInstance().notifyStateEntered("ROOT.jedz_w_gore");
+            pushNullConfig();
+            rootState_subState = jedz_w_gore;
+            rootState_active = jedz_w_gore;
+            jedz_w_goreEnter();
         }
         
         //## statechart_method 
@@ -583,31 +654,73 @@ public class Winda implements RiJStateConcept, Animated {
             if(event.getTimeoutId() == Winda_Timeout_jazda_id)
                 {
                     //## transition 7 
-                    if(osiagnalWlasciwePietro())
+                    if(kierunekWGore)
                         {
-                            animInstance().notifyTransitionStarted("5");
-                            animInstance().notifyTransitionStarted("7");
-                            jazda_exit();
-                            pietro_entDef();
-                            animInstance().notifyTransitionEnded("7");
-                            animInstance().notifyTransitionEnded("5");
-                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                            //## transition 9 
+                            if(maPrzystankiPowyzej())
+                                {
+                                    animInstance().notifyTransitionStarted("13");
+                                    animInstance().notifyTransitionStarted("7");
+                                    animInstance().notifyTransitionStarted("9");
+                                    jazda_exit();
+                                    jedz_w_gore_entDef();
+                                    animInstance().notifyTransitionEnded("9");
+                                    animInstance().notifyTransitionEnded("7");
+                                    animInstance().notifyTransitionEnded("13");
+                                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                }
+                            else
+                                {
+                                    //## transition 10 
+                                    if(!maPrzystankiPowyzej())
+                                        {
+                                            animInstance().notifyTransitionStarted("13");
+                                            animInstance().notifyTransitionStarted("7");
+                                            animInstance().notifyTransitionStarted("10");
+                                            jazda_exit();
+                                            jedz_w_dol_entDef();
+                                            animInstance().notifyTransitionEnded("10");
+                                            animInstance().notifyTransitionEnded("7");
+                                            animInstance().notifyTransitionEnded("13");
+                                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                        }
+                                }
                         }
                     else
                         {
-                            animInstance().notifyTransitionStarted("5");
-                            animInstance().notifyTransitionStarted("6");
-                            jazda_exit();
-                            //#[ transition 6 
-                            if(kierunekWGore)
-                             	obecnePietro++;
-                             else
-                             	obecnePietro--;
-                            //#]
-                            jazda_entDef();
-                            animInstance().notifyTransitionEnded("6");
-                            animInstance().notifyTransitionEnded("5");
-                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                            //## transition 8 
+                            if(!kierunekWGore)
+                                {
+                                    //## transition 11 
+                                    if(!maPrzystankiPonizej())
+                                        {
+                                            animInstance().notifyTransitionStarted("13");
+                                            animInstance().notifyTransitionStarted("8");
+                                            animInstance().notifyTransitionStarted("11");
+                                            jazda_exit();
+                                            jedz_w_gore_entDef();
+                                            animInstance().notifyTransitionEnded("11");
+                                            animInstance().notifyTransitionEnded("8");
+                                            animInstance().notifyTransitionEnded("13");
+                                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                        }
+                                    else
+                                        {
+                                            //## transition 12 
+                                            if(maPrzystankiPonizej())
+                                                {
+                                                    animInstance().notifyTransitionStarted("13");
+                                                    animInstance().notifyTransitionStarted("8");
+                                                    animInstance().notifyTransitionStarted("12");
+                                                    jazda_exit();
+                                                    jedz_w_dol_entDef();
+                                                    animInstance().notifyTransitionEnded("12");
+                                                    animInstance().notifyTransitionEnded("8");
+                                                    animInstance().notifyTransitionEnded("13");
+                                                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                                }
+                                        }
+                                }
                         }
                 }
             return res;
@@ -616,6 +729,89 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public void jazda_entDef() {
             jazda_enter();
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalonyExit() {
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalonyEnter() {
+        }
+        
+        //## statechart_method 
+        public int jedz_w_dol_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = jedz_w_dolTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int jedz_w_dolTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("15");
+            jedz_w_dol_exit();
+            kierunekUstalony_entDef();
+            animInstance().notifyTransitionEnded("15");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int jedz_w_goreTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            animInstance().notifyTransitionStarted("14");
+            jedz_w_gore_exit();
+            kierunekUstalony_entDef();
+            animInstance().notifyTransitionEnded("14");
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int kierunekUstalonyTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            //## transition 6 
+            if(osiagnalWlasciwePietro())
+                {
+                    animInstance().notifyTransitionStarted("16");
+                    animInstance().notifyTransitionStarted("6");
+                    kierunekUstalony_exit();
+                    pietro_entDef();
+                    animInstance().notifyTransitionEnded("6");
+                    animInstance().notifyTransitionEnded("16");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            else
+                {
+                    animInstance().notifyTransitionStarted("16");
+                    animInstance().notifyTransitionStarted("5");
+                    kierunekUstalony_exit();
+                    //#[ transition 5 
+                    if(kierunekWGore)
+                     	obecnePietro++;
+                     else
+                     	obecnePietro--;
+                    //#]
+                    jazda_entDef();
+                    animInstance().notifyTransitionEnded("5");
+                    animInstance().notifyTransitionEnded("16");
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalony_enter() {
+            animInstance().notifyStateEntered("ROOT.kierunekUstalony");
+            pushNullConfig();
+            rootState_subState = kierunekUstalony;
+            rootState_active = kierunekUstalony;
+            kierunekUstalonyEnter();
         }
         
         //## statechart_method 
@@ -633,11 +829,40 @@ public class Winda implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void jedz_w_goreEnter() {
+            //#[ state jedz_w_gore.(Entry) 
+             kierunekWGore = true;
+            //#]
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalony_exit() {
+            popNullConfig();
+            kierunekUstalonyExit();
+            animInstance().notifyStateExited("ROOT.kierunekUstalony");
+        }
+        
+        //## statechart_method 
         public void pietro_enter() {
             animInstance().notifyStateEntered("ROOT.pietro");
             rootState_subState = pietro;
             rootState_active = pietro;
             pietroEnter();
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dolExit() {
+        }
+        
+        //## statechart_method 
+        public int kierunekUstalony_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = kierunekUstalonyTakeNull();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -654,11 +879,23 @@ public class Winda implements RiJStateConcept, Animated {
         public void jazdaEnter() {
             //#[ state jazda.(Entry) 
             System.out.println("Winda na pietrze " + obecnePietro);
-            wyznaczKierunek();
+            
                  
             
             //#]
             itsRiJThread.schedTimeout(2000, Winda_Timeout_jazda_id, this, "ROOT.jazda");
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dolEnter() {
+            //#[ state jedz_w_dol.(Entry) 
+            kierunekWGore = false;
+            //#]
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalony_entDef() {
+            kierunekUstalony_enter();
         }
         
         //## statechart_method 
@@ -672,7 +909,18 @@ public class Winda implements RiJStateConcept, Animated {
         }
         
         //## statechart_method 
+        public void jedz_w_gore_exit() {
+            popNullConfig();
+            jedz_w_goreExit();
+            animInstance().notifyStateExited("ROOT.jedz_w_gore");
+        }
+        
+        //## statechart_method 
         public void bezczynnyEnter() {
+        }
+        
+        //## statechart_method 
+        public void jedz_w_goreExit() {
         }
         
         //## statechart_method 
@@ -695,6 +943,13 @@ public class Winda implements RiJStateConcept, Animated {
         public void jazda_exit() {
             jazdaExit();
             animInstance().notifyStateExited("ROOT.jazda");
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dol_exit() {
+            popNullConfig();
+            jedz_w_dolExit();
+            animInstance().notifyStateExited("ROOT.jedz_w_dol");
         }
         
         //## statechart_method 
@@ -749,6 +1004,22 @@ public class Winda implements RiJStateConcept, Animated {
                 }
             
             return res;
+        }
+        
+        //## statechart_method 
+        public int jedz_w_gore_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = jedz_w_goreTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void jedz_w_gore_entDef() {
+            jedz_w_gore_enter();
         }
         
         //## statechart_method 

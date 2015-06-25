@@ -40,8 +40,11 @@ public class Winda implements RiJStateConcept {
     //#[ ignore 
     public static final int RiJNonState=0;
     public static final int pietro=1;
-    public static final int jazda=2;
-    public static final int bezczynny=3;
+    public static final int kierunekUstalony=2;
+    public static final int jedz_w_gore=3;
+    public static final int jedz_w_dol=4;
+    public static final int jazda=5;
+    public static final int bezczynny=6;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -360,6 +363,21 @@ public class Winda implements RiJStateConcept {
                     res = pietro_takeEvent(id);
                 }
                 break;
+                case jedz_w_gore:
+                {
+                    res = jedz_w_gore_takeEvent(id);
+                }
+                break;
+                case jedz_w_dol:
+                {
+                    res = jedz_w_dol_takeEvent(id);
+                }
+                break;
+                case kierunekUstalony:
+                {
+                    res = kierunekUstalony_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
@@ -374,6 +392,27 @@ public class Winda implements RiJStateConcept {
         
         //## statechart_method 
         public void bezczynnyExit() {
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dol_enter() {
+            pushNullConfig();
+            rootState_subState = jedz_w_dol;
+            rootState_active = jedz_w_dol;
+            jedz_w_dolEnter();
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dol_entDef() {
+            jedz_w_dol_enter();
+        }
+        
+        //## statechart_method 
+        public void jedz_w_gore_enter() {
+            pushNullConfig();
+            rootState_subState = jedz_w_gore;
+            rootState_active = jedz_w_gore;
+            jedz_w_goreEnter();
         }
         
         //## statechart_method 
@@ -409,23 +448,49 @@ public class Winda implements RiJStateConcept {
             if(event.getTimeoutId() == Winda_Timeout_jazda_id)
                 {
                     //## transition 7 
-                    if(osiagnalWlasciwePietro())
+                    if(kierunekWGore)
                         {
-                            jazda_exit();
-                            pietro_entDef();
-                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                            //## transition 9 
+                            if(maPrzystankiWGore())
+                                {
+                                    jazda_exit();
+                                    jedz_w_gore_entDef();
+                                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                }
+                            else
+                                {
+                                    //## transition 10 
+                                    if(!maPrzystankiWGore())
+                                        {
+                                            jazda_exit();
+                                            jedz_w_dol_entDef();
+                                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                        }
+                                }
                         }
                     else
                         {
-                            jazda_exit();
-                            //#[ transition 6 
-                            if(kierunekWGore)
-                             	obecnePietro++;
-                             else
-                             	obecnePietro--;
-                            //#]
-                            jazda_entDef();
-                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                            //## transition 8 
+                            if(!kierunekWGore)
+                                {
+                                    //## transition 11 
+                                    if(!maPrzystankiWDol())
+                                        {
+                                            jazda_exit();
+                                            jedz_w_gore_entDef();
+                                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                        }
+                                    else
+                                        {
+                                            //## transition 12 
+                                            if(maPrzystankiWDol())
+                                                {
+                                                    jazda_exit();
+                                                    jedz_w_dol_entDef();
+                                                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                                                }
+                                        }
+                                }
                         }
                 }
             return res;
@@ -434,6 +499,76 @@ public class Winda implements RiJStateConcept {
         //## statechart_method 
         public void jazda_entDef() {
             jazda_enter();
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalonyExit() {
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalonyEnter() {
+        }
+        
+        //## statechart_method 
+        public int jedz_w_dol_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = jedz_w_dolTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int jedz_w_dolTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            jedz_w_dol_exit();
+            kierunekUstalony_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int jedz_w_goreTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            jedz_w_gore_exit();
+            kierunekUstalony_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int kierunekUstalonyTakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            //## transition 6 
+            if(osiagnalWlasciwePietro())
+                {
+                    kierunekUstalony_exit();
+                    pietro_entDef();
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            else
+                {
+                    kierunekUstalony_exit();
+                    //#[ transition 5 
+                    if(kierunekWGore)
+                     	obecnePietro++;
+                     else
+                     	obecnePietro--;
+                    //#]
+                    jazda_entDef();
+                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                }
+            return res;
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalony_enter() {
+            pushNullConfig();
+            rootState_subState = kierunekUstalony;
+            rootState_active = kierunekUstalony;
+            kierunekUstalonyEnter();
         }
         
         //## statechart_method 
@@ -450,10 +585,38 @@ public class Winda implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void jedz_w_goreEnter() {
+            //#[ state jedz_w_gore.(Entry) 
+             kierunekWGore = true;
+            //#]
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalony_exit() {
+            popNullConfig();
+            kierunekUstalonyExit();
+        }
+        
+        //## statechart_method 
         public void pietro_enter() {
             rootState_subState = pietro;
             rootState_active = pietro;
             pietroEnter();
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dolExit() {
+        }
+        
+        //## statechart_method 
+        public int kierunekUstalony_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = kierunekUstalonyTakeNull();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -469,11 +632,23 @@ public class Winda implements RiJStateConcept {
         public void jazdaEnter() {
             //#[ state jazda.(Entry) 
             System.out.println("Winda na pietrze " + obecnePietro);
-            wyznaczKierunek();
+            
                  
             
             //#]
             itsRiJThread.schedTimeout(2000, Winda_Timeout_jazda_id, this, null);
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dolEnter() {
+            //#[ state jedz_w_dol.(Entry) 
+            kierunekWGore = false;
+            //#]
+        }
+        
+        //## statechart_method 
+        public void kierunekUstalony_entDef() {
+            kierunekUstalony_enter();
         }
         
         //## statechart_method 
@@ -487,7 +662,17 @@ public class Winda implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void jedz_w_gore_exit() {
+            popNullConfig();
+            jedz_w_goreExit();
+        }
+        
+        //## statechart_method 
         public void bezczynnyEnter() {
+        }
+        
+        //## statechart_method 
+        public void jedz_w_goreExit() {
         }
         
         //## statechart_method 
@@ -507,6 +692,12 @@ public class Winda implements RiJStateConcept {
         //## statechart_method 
         public void jazda_exit() {
             jazdaExit();
+        }
+        
+        //## statechart_method 
+        public void jedz_w_dol_exit() {
+            popNullConfig();
+            jedz_w_dolExit();
         }
         
         //## statechart_method 
@@ -556,6 +747,22 @@ public class Winda implements RiJStateConcept {
                 }
             
             return res;
+        }
+        
+        //## statechart_method 
+        public int jedz_w_gore_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = jedz_w_goreTakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void jedz_w_gore_entDef() {
+            jedz_w_gore_enter();
         }
         
         //## statechart_method 
