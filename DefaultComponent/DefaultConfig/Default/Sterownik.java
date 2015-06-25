@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Sterownik
-//!	Generated Date	: Wed, 24, Jun 2015 
+//!	Generated Date	: Thu, 25, Jun 2015 
 	File Path	: DefaultComponent/DefaultConfig/Default/Sterownik.java
 *********************************************************************/
 
@@ -37,24 +37,32 @@ public class Sterownik implements RiJStateConcept {
     
     //#[ ignore 
     public static final int RiJNonState=0;
-    public static final int winda1_btn5=1;
-    public static final int winda1_btn4=2;
-    public static final int winda1_btn3=3;
-    public static final int winda1_btn2=4;
-    public static final int winda1_btn1=5;
-    public static final int winda1_btn0=6;
-    public static final int TrzecieGora=7;
-    public static final int TrzecieDol=8;
-    public static final int state_15=9;
-    public static final int start=10;
-    public static final int PierwszeGora=11;
-    public static final int PierwszeDol=12;
-    public static final int PiateDol=13;
-    public static final int ParterGora=14;
-    public static final int DrugieGora=15;
-    public static final int DrugieDol=16;
-    public static final int CzwarteGora=17;
-    public static final int CzwarteDol=18;
+    public static final int winda2_btn5=1;
+    public static final int winda2_btn4=2;
+    public static final int winda2_btn3=3;
+    public static final int winda2_btn2=4;
+    public static final int winda2_btn1=5;
+    public static final int winda2_btn0=6;
+    public static final int winda1_btn5=7;
+    public static final int winda1_btn4=8;
+    public static final int winda1_btn3=9;
+    public static final int winda1_btn2=10;
+    public static final int winda1_btn1=11;
+    public static final int winda1_btn0=12;
+    public static final int uruchomienieWindy2=13;
+    public static final int uruchomienieWindy1=14;
+    public static final int TrzecieGora=15;
+    public static final int TrzecieDol=16;
+    public static final int state_15=17;
+    public static final int start=18;
+    public static final int PierwszeGora=19;
+    public static final int PierwszeDol=20;
+    public static final int PiateDol=21;
+    public static final int ParterGora=22;
+    public static final int DrugieGora=23;
+    public static final int DrugieDol=24;
+    public static final int CzwarteGora=25;
+    public static final int CzwarteDol=26;
     //#]
     protected int rootState_subState;		//## ignore 
     
@@ -124,23 +132,55 @@ public class Sterownik implements RiJStateConcept {
     
     /**
      * @param pietro
+     * @param wezwanieWGore
     */
-    //## operation zamowPrzejazdWGore(int) 
-    public void zamowPrzejazdWGore(int pietro) {
-        //#[ operation zamowPrzejazdWGore(int) 
-        System.out.println("Wezwanie z pietra " + pietro + ", jazda w gore.");
-        /*
-        Winda winda1 = itsWinda.get(0);
-        Winda winda2 = itsWinda.get(1);
+    //## operation wyznaczWinde(int,boolean) 
+    public Winda wyznaczWinde(int pietro, boolean wezwanieWGore) {
+        //#[ operation wyznaczWinde(int,boolean) 
+        	// Ktoras z wind ma przystanek w danym kierunku
+        	if( (wezwanieWGore && itsWinda_1.maPrzystanekWGore(pietro) || itsWinda_2.maPrzystanekWGore(pietro)) || (!wezwanieWGore && itsWinda_1.maPrzystanekWDol(pietro) || itsWinda_2.maPrzystanekWDol(pietro))){
+        		return null;
+        	}else{
+        		// Winda1 jedzie we wlasciwym kierunku i jest przed danym pietrem
+        		if( itsWinda_1.kierunekWGore == wezwanieWGore && ( (wezwanieWGore && itsWinda_1.obecnePietro < pietro) || (!wezwanieWGore && itsWinda_1.obecnePietro > pietro) ) ){
+        			// Winda2 jedzie we wlasciwym kierunku i jest przed danym pietrem
+        			if(itsWinda_2.kierunekWGore == wezwanieWGore && ( (wezwanieWGore && itsWinda_2.obecnePietro < pietro) || (!wezwanieWGore && itsWinda_2.obecnePietro > pietro) )){
+        				return znajdzBlizszaWinde(pietro);	
+        			}else{
+        				return itsWinda_1;
+        			}
+        		}else{
+        			// Winda2 jedzie we wlasciwym kierunku i jest przed danym pietrem
+        			if(itsWinda_2.kierunekWGore == wezwanieWGore && ( (wezwanieWGore && itsWinda_2.obecnePietro < pietro) || (!wezwanieWGore && itsWinda_2.obecnePietro > pietro) )){
+        				return itsWinda_2;	
+        			}else{
+        				return znajdzBlizszaWinde(pietro);
+        			}
+        		}
+        	}
         
-        if(!winda1.jestPrzystanekWGore(pietro) || !winda2.jestPrzystanekWGore(pietro)){
-        	//if(pietro > winda1.obecnePietro && winda1.kierunekWGore)
-        
-        } 
-        
-        */
-        
-        itsWinda_1.dodajStopWGore(pietro);
+        //#]
+    }
+    
+    /**
+     * @param pietro
+    */
+    //## operation znajdzBlizszaWinde(int) 
+    public Winda znajdzBlizszaWinde(int pietro) {
+        //#[ operation znajdzBlizszaWinde(int) 
+        //Ktora ma mniej pieter do zatrzymania
+        if(itsWinda_1.lacznaIloscPrzystankow() < itsWinda_2.lacznaIloscPrzystankow()){
+        	return itsWinda_1;	
+        }else if(itsWinda_1.lacznaIloscPrzystankow() > itsWinda_2.lacznaIloscPrzystankow()){
+        	return itsWinda_2;
+        }else{
+        	//Sprawdzenie ktora jest blizej
+        	if(Math.abs(itsWinda_1.obecnePietro - pietro) < Math.abs(itsWinda_2.obecnePietro - pietro)){
+        		return itsWinda_1;
+        	}else{
+        		return itsWinda_2;
+        	}
+        }
         //#]
     }
     
@@ -343,6 +383,46 @@ public class Sterownik implements RiJStateConcept {
                     res = winda1_btn5_takeEvent(id);
                 }
                 break;
+                case winda2_btn0:
+                {
+                    res = winda2_btn0_takeEvent(id);
+                }
+                break;
+                case winda2_btn1:
+                {
+                    res = winda2_btn1_takeEvent(id);
+                }
+                break;
+                case winda2_btn2:
+                {
+                    res = winda2_btn2_takeEvent(id);
+                }
+                break;
+                case winda2_btn3:
+                {
+                    res = winda2_btn3_takeEvent(id);
+                }
+                break;
+                case winda2_btn4:
+                {
+                    res = winda2_btn4_takeEvent(id);
+                }
+                break;
+                case winda2_btn5:
+                {
+                    res = winda2_btn5_takeEvent(id);
+                }
+                break;
+                case uruchomienieWindy1:
+                {
+                    res = uruchomienieWindy1_takeEvent(id);
+                }
+                break;
+                case uruchomienieWindy2:
+                {
+                    res = uruchomienieWindy2_takeEvent(id);
+                }
+                break;
                 default:
                     break;
             }
@@ -412,7 +492,36 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int uruchomienieWindy1_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = uruchomienieWindy1TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void uruchomienieWindy2_exit() {
+            popNullConfig();
+            uruchomienieWindy2Exit();
+        }
+        
+        //## statechart_method 
         public void winda1_btn5Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda2_btn0Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda2_btn4Enter() {
+            //#[ state winda2_btn4.(Entry) 
+            itsWinda_2.dodajStopWGore(4);
+            itsWinda_2.dodajStopWDol(4);
+            //#]
         }
         
         //## statechart_method 
@@ -437,6 +546,64 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int startTakeevWinda2Czwarte() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda2_btn4_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int uruchomienieWindy1TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            uruchomienieWindy1_exit();
+            start_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void uruchomienieWindy1_exit() {
+            popNullConfig();
+            uruchomienieWindy1Exit();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn1Exit() {
+        }
+        
+        //## statechart_method 
+        public int winda2_btn2_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda2_btn2TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn3Enter() {
+            //#[ state winda2_btn3.(Entry) 
+            itsWinda_2.dodajStopWGore(3);
+            itsWinda_2.dodajStopWDol(3);
+            //#]
+        }
+        
+        //## statechart_method 
+        public int winda2_btn5_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda2_btn5TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
         public void CzwarteDol_entDef() {
             CzwarteDol_enter();
         }
@@ -458,6 +625,15 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int startTakeevWinda1Drugie() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda1_btn2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void winda1_btn0_entDef() {
             winda1_btn0_enter();
         }
@@ -465,7 +641,39 @@ public class Sterownik implements RiJStateConcept {
         //## statechart_method 
         public int winda1_btn1_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda1_btn1TakeNull();
+                }
+            
             return res;
+        }
+        
+        //## statechart_method 
+        public int winda1_btn2TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda1_btn2_exit();
+            uruchomienieWindy1_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn2Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda2_btn2Enter() {
+            //#[ state winda2_btn2.(Entry) 
+            itsWinda_2.dodajStopWGore(2);
+            itsWinda_2.dodajStopWDol(2);
+            //#]
+        }
+        
+        //## statechart_method 
+        public void winda2_btn5_exit() {
+            popNullConfig();
+            winda2_btn5Exit();
         }
         
         //## statechart_method 
@@ -493,6 +701,15 @@ public class Sterownik implements RiJStateConcept {
             System.out.println("Wezwanie: Pierwsze, na dol");   
             itsWinda_1.dodajStopWDol(1);
             //#]
+        }
+        
+        //## statechart_method 
+        public int startTakeevWinda2Drugie() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda2_btn2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -540,7 +757,44 @@ public class Sterownik implements RiJStateConcept {
         //## statechart_method 
         public int winda1_btn4_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda1_btn4TakeNull();
+                }
+            
             return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn1Enter() {
+            //#[ state winda2_btn1.(Entry) 
+            itsWinda_2.dodajStopWGore(1);
+            itsWinda_2.dodajStopWDol(1);
+            //#]
+        }
+        
+        //## statechart_method 
+        public int winda2_btn2TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda2_btn2_exit();
+            uruchomienieWindy2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn2_entDef() {
+            winda2_btn2_enter();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn3Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda2_btn4_exit() {
+            popNullConfig();
+            winda2_btn4Exit();
         }
         
         //## statechart_method 
@@ -595,6 +849,29 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void winda2_btn0Enter() {
+            //#[ state winda2_btn0.(Entry) 
+            itsWinda_2.dodajStopWGore(0);
+            itsWinda_2.dodajStopWDol(0);
+            //#]
+        }
+        
+        //## statechart_method 
+        public void winda2_btn3_exit() {
+            popNullConfig();
+            winda2_btn3Exit();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn4Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda2_btn5_entDef() {
+            winda2_btn5_enter();
+        }
+        
+        //## statechart_method 
         public void ParterGora_enter() {
             pushNullConfig();
             rootState_subState = ParterGora;
@@ -625,7 +902,35 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void uruchomienieWindy2_entDef() {
+            uruchomienieWindy2_enter();
+        }
+        
+        //## statechart_method 
+        public int winda1_btn1TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda1_btn1_exit();
+            uruchomienieWindy1_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void winda1_btn5Enter() {
+            //#[ state winda1_btn5.(Entry) 
+            itsWinda_1.dodajStopWGore(5);
+            itsWinda_1.dodajStopWDol(5);
+            //#]
+        }
+        
+        //## statechart_method 
+        public void winda2_btn2_exit() {
+            popNullConfig();
+            winda2_btn2Exit();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn5Exit() {
         }
         
         //## statechart_method 
@@ -648,6 +953,15 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int startTakeevWinda1Parter() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda1_btn0_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public int startTakeevCzwarteDol() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             start_exit();
@@ -667,11 +981,50 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn4Enter() {
+            //#[ state winda1_btn4.(Entry) 
+            itsWinda_1.dodajStopWGore(4);
+            itsWinda_1.dodajStopWDol(4);
+            //#]
+        }
+        
+        //## statechart_method 
+        public int winda2_btn1_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda2_btn1TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int winda2_btn1TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda2_btn1_exit();
+            uruchomienieWindy2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn1_exit() {
+            popNullConfig();
+            winda2_btn1Exit();
         }
         
         //## statechart_method 
         public int rootState_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int startTakeevWinda2Parter() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda2_btn0_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
@@ -685,7 +1038,12 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void uruchomienieWindy1Exit() {
+        }
+        
+        //## statechart_method 
         public void winda1_btn0_enter() {
+            pushNullConfig();
             rootState_subState = winda1_btn0;
             rootState_active = winda1_btn0;
             winda1_btn0Enter();
@@ -693,6 +1051,27 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn3Enter() {
+            //#[ state winda1_btn3.(Entry) 
+            itsWinda_1.dodajStopWGore(3);
+            itsWinda_1.dodajStopWDol(3);
+            //#]
+        }
+        
+        //## statechart_method 
+        public void winda2_btn0_exit() {
+            popNullConfig();
+            winda2_btn0Exit();
+        }
+        
+        //## statechart_method 
+        public int winda2_btn4_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda2_btn4TakeNull();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -729,13 +1108,23 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void uruchomienieWindy2Exit() {
+        }
+        
+        //## statechart_method 
         public int winda1_btn0_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda1_btn0TakeNull();
+                }
+            
             return res;
         }
         
         //## statechart_method 
         public void winda1_btn1_enter() {
+            pushNullConfig();
             rootState_subState = winda1_btn1;
             rootState_active = winda1_btn1;
             winda1_btn1Enter();
@@ -748,6 +1137,7 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn2_enter() {
+            pushNullConfig();
             rootState_subState = winda1_btn2;
             rootState_active = winda1_btn2;
             winda1_btn2Enter();
@@ -755,17 +1145,41 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn2Enter() {
+            //#[ state winda1_btn2.(Entry) 
+             itsWinda_1.dodajStopWGore(2);
+            itsWinda_1.dodajStopWDol(2);
+            //#]
         }
         
         //## statechart_method 
         public int winda1_btn3_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda1_btn3TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public int winda1_btn5TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda1_btn5_exit();
+            uruchomienieWindy1_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
         
         //## statechart_method 
         public void winda1_btn5_exit() {
+            popNullConfig();
             winda1_btn5Exit();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn0_entDef() {
+            winda2_btn0_enter();
         }
         
         //## statechart_method 
@@ -824,11 +1238,25 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int winda1_btn0TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda1_btn0_exit();
+            uruchomienieWindy1_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void winda1_btn1Enter() {
+            //#[ state winda1_btn1.(Entry) 
+            itsWinda_1.dodajStopWGore(1);
+            itsWinda_1.dodajStopWDol(1);
+            //#]
         }
         
         //## statechart_method 
         public void winda1_btn3_enter() {
+            pushNullConfig();
             rootState_subState = winda1_btn3;
             rootState_active = winda1_btn3;
             winda1_btn3Enter();
@@ -836,12 +1264,36 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn4_exit() {
+            popNullConfig();
             winda1_btn4Exit();
         }
         
         //## statechart_method 
         public void winda1_btn4_entDef() {
             winda1_btn4_enter();
+        }
+        
+        //## statechart_method 
+        public int winda2_btn0TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda2_btn0_exit();
+            uruchomienieWindy2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn3_entDef() {
+            winda2_btn3_enter();
+        }
+        
+        //## statechart_method 
+        public int winda2_btn5TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda2_btn5_exit();
+            uruchomienieWindy2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -871,6 +1323,24 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int startTakeevWinda2Pierwsze() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda2_btn1_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int startTakeevWinda1Trzecie() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda1_btn3_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public int TrzecieGora_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
@@ -891,16 +1361,30 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void uruchomienieWindy1_enter() {
+            pushNullConfig();
+            rootState_subState = uruchomienieWindy1;
+            rootState_active = uruchomienieWindy1;
+            uruchomienieWindy1Enter();
+        }
+        
+        //## statechart_method 
         public void winda1_btn0Enter() {
+            //#[ state winda1_btn0.(Entry) 
+            itsWinda_1.dodajStopWGore(0);
+            itsWinda_1.dodajStopWDol(0);
+            //#]
         }
         
         //## statechart_method 
         public void winda1_btn3_exit() {
+            popNullConfig();
             winda1_btn3Exit();
         }
         
         //## statechart_method 
         public void winda1_btn4_enter() {
+            pushNullConfig();
             rootState_subState = winda1_btn4;
             rootState_active = winda1_btn4;
             winda1_btn4Enter();
@@ -908,6 +1392,7 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn5_enter() {
+            pushNullConfig();
             rootState_subState = winda1_btn5;
             rootState_active = winda1_btn5;
             winda1_btn5Enter();
@@ -945,9 +1430,25 @@ public class Sterownik implements RiJStateConcept {
         //## statechart_method 
         public int start_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(evDrugieGora.evDrugieGora_Default_id))
+            if(event.isTypeOf(evWinda1Parter.evWinda1Parter_Default_id))
+                {
+                    res = startTakeevWinda1Parter();
+                }
+            else if(event.isTypeOf(evWinda2Trzecie.evWinda2Trzecie_Default_id))
+                {
+                    res = startTakeevWinda2Trzecie();
+                }
+            else if(event.isTypeOf(evWinda2Parter.evWinda2Parter_Default_id))
+                {
+                    res = startTakeevWinda2Parter();
+                }
+            else if(event.isTypeOf(evDrugieGora.evDrugieGora_Default_id))
                 {
                     res = startTakeevDrugieGora();
+                }
+            else if(event.isTypeOf(evWinda2Czwarte.evWinda2Czwarte_Default_id))
+                {
+                    res = startTakeevWinda2Czwarte();
                 }
             else if(event.isTypeOf(evPierwszeDol.evPierwszeDol_Default_id))
                 {
@@ -957,6 +1458,10 @@ public class Sterownik implements RiJStateConcept {
                 {
                     res = startTakeevPierwszeGora();
                 }
+            else if(event.isTypeOf(evWinda2Piate.evWinda2Piate_Default_id))
+                {
+                    res = startTakeevWinda2Piate();
+                }
             else if(event.isTypeOf(evPiateDol.evPiateDol_Default_id))
                 {
                     res = startTakeevPiateDol();
@@ -964,6 +1469,10 @@ public class Sterownik implements RiJStateConcept {
             else if(event.isTypeOf(evDrugieDol.evDrugieDol_Default_id))
                 {
                     res = startTakeevDrugieDol();
+                }
+            else if(event.isTypeOf(evWinda1Piate.evWinda1Piate_Default_id))
+                {
+                    res = startTakeevWinda1Piate();
                 }
             else if(event.isTypeOf(evCzwarteDol.evCzwarteDol_Default_id))
                 {
@@ -973,9 +1482,21 @@ public class Sterownik implements RiJStateConcept {
                 {
                     res = startTakeevParterGora();
                 }
+            else if(event.isTypeOf(evWinda2Pierwsze.evWinda2Pierwsze_Default_id))
+                {
+                    res = startTakeevWinda2Pierwsze();
+                }
             else if(event.isTypeOf(evTrzecieDol.evTrzecieDol_Default_id))
                 {
                     res = startTakeevTrzecieDol();
+                }
+            else if(event.isTypeOf(evWinda1Trzecie.evWinda1Trzecie_Default_id))
+                {
+                    res = startTakeevWinda1Trzecie();
+                }
+            else if(event.isTypeOf(evWinda1Drugie.evWinda1Drugie_Default_id))
+                {
+                    res = startTakeevWinda1Drugie();
                 }
             else if(event.isTypeOf(evCzwarteGora.evCzwarteGora_Default_id))
                 {
@@ -984,6 +1505,18 @@ public class Sterownik implements RiJStateConcept {
             else if(event.isTypeOf(evTrzecieGora.evTrzecieGora_Default_id))
                 {
                     res = startTakeevTrzecieGora();
+                }
+            else if(event.isTypeOf(evWinda2Drugie.evWinda2Drugie_Default_id))
+                {
+                    res = startTakeevWinda2Drugie();
+                }
+            else if(event.isTypeOf(evWinda1Czwarte.evWinda1Czwarte_Default_id))
+                {
+                    res = startTakeevWinda1Czwarte();
+                }
+            else if(event.isTypeOf(evWinda1Pierwsze.evWinda1Pierwsze_Default_id))
+                {
+                    res = startTakeevWinda1Pierwsze();
                 }
             
             return res;
@@ -1007,7 +1540,27 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int uruchomienieWindy2_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = uruchomienieWindy2TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void uruchomienieWindy2_enter() {
+            pushNullConfig();
+            rootState_subState = uruchomienieWindy2;
+            rootState_active = uruchomienieWindy2;
+            uruchomienieWindy2Enter();
+        }
+        
+        //## statechart_method 
         public void winda1_btn2_exit() {
+            popNullConfig();
             winda1_btn2Exit();
         }
         
@@ -1042,6 +1595,15 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int startTakeevWinda1Czwarte() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda1_btn4_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public int startTakeevPierwszeGora() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             start_exit();
@@ -1060,7 +1622,55 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn1_exit() {
+            popNullConfig();
             winda1_btn1Exit();
+        }
+        
+        //## statechart_method 
+        public int winda1_btn4TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda1_btn4_exit();
+            uruchomienieWindy1_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int winda2_btn0_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda2_btn0TakeNull();
+                }
+            
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn0_enter() {
+            pushNullConfig();
+            rootState_subState = winda2_btn0;
+            rootState_active = winda2_btn0;
+            winda2_btn0Enter();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn1_enter() {
+            pushNullConfig();
+            rootState_subState = winda2_btn1;
+            rootState_active = winda2_btn1;
+            winda2_btn1Enter();
+        }
+        
+        //## statechart_method 
+        public int winda2_btn3_takeEvent(short id) {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda2_btn3TakeNull();
+                }
+            
+            return res;
         }
         
         //## statechart_method 
@@ -1087,6 +1697,15 @@ public class Sterownik implements RiJStateConcept {
             System.out.println("Wezwanie: Pierwsze, do gory");
             itsWinda_1.dodajStopWGore(1);
             //#]
+        }
+        
+        //## statechart_method 
+        public int startTakeevWinda1Pierwsze() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda1_btn1_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -1125,11 +1744,29 @@ public class Sterownik implements RiJStateConcept {
         
         //## statechart_method 
         public void winda1_btn0_exit() {
+            popNullConfig();
             winda1_btn0Exit();
         }
         
         //## statechart_method 
         public void winda1_btn1Exit() {
+        }
+        
+        //## statechart_method 
+        public void winda2_btn2_enter() {
+            pushNullConfig();
+            rootState_subState = winda2_btn2;
+            rootState_active = winda2_btn2;
+            winda2_btn2Enter();
+        }
+        
+        //## statechart_method 
+        public int winda2_btn4TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda2_btn4_exit();
+            uruchomienieWindy2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
         }
         
         //## statechart_method 
@@ -1182,8 +1819,20 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void uruchomienieWindy2Enter() {
+            //#[ state uruchomienieWindy2.(Entry) 
+            itsWinda_2.gen(new evUruchom());
+            //#]
+        }
+        
+        //## statechart_method 
         public int winda1_btn2_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda1_btn2TakeNull();
+                }
+            
             return res;
         }
         
@@ -1199,7 +1848,33 @@ public class Sterownik implements RiJStateConcept {
         //## statechart_method 
         public int winda1_btn5_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+                {
+                    res = winda1_btn5TakeNull();
+                }
+            
             return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn1_entDef() {
+            winda2_btn1_enter();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn3_enter() {
+            pushNullConfig();
+            rootState_subState = winda2_btn3;
+            rootState_active = winda2_btn3;
+            winda2_btn3Enter();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn4_enter() {
+            pushNullConfig();
+            rootState_subState = winda2_btn4;
+            rootState_active = winda2_btn4;
+            winda2_btn4Enter();
         }
         
         //## statechart_method 
@@ -1245,10 +1920,44 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int startTakeevWinda2Piate() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda2_btn5_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public int startTakeevDrugieGora() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             start_exit();
             DrugieGora_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void uruchomienieWindy1Enter() {
+            //#[ state uruchomienieWindy1.(Entry) 
+            itsWinda_1.gen(new evUruchom());
+            //#]
+        }
+        
+        //## statechart_method 
+        public int uruchomienieWindy2TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            uruchomienieWindy2_exit();
+            start_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int winda1_btn3TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda1_btn3_exit();
+            uruchomienieWindy1_entDef();
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -1260,6 +1969,19 @@ public class Sterownik implements RiJStateConcept {
         //## statechart_method 
         public void winda1_btn5_entDef() {
             winda1_btn5_enter();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn4_entDef() {
+            winda2_btn4_enter();
+        }
+        
+        //## statechart_method 
+        public void winda2_btn5_enter() {
+            pushNullConfig();
+            rootState_subState = winda2_btn5;
+            rootState_active = winda2_btn5;
+            winda2_btn5Enter();
         }
         
         //## statechart_method 
@@ -1277,6 +1999,24 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public int startTakeevWinda2Trzecie() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda2_btn3_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public int startTakeevWinda1Piate() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            start_exit();
+            winda1_btn5_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
         public void start_enter() {
             rootState_subState = start;
             rootState_active = start;
@@ -1284,7 +2024,29 @@ public class Sterownik implements RiJStateConcept {
         }
         
         //## statechart_method 
+        public void uruchomienieWindy1_entDef() {
+            uruchomienieWindy1_enter();
+        }
+        
+        //## statechart_method 
         public void winda1_btn4Exit() {
+        }
+        
+        //## statechart_method 
+        public int winda2_btn3TakeNull() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            winda2_btn3_exit();
+            uruchomienieWindy2_entDef();
+            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+            return res;
+        }
+        
+        //## statechart_method 
+        public void winda2_btn5Enter() {
+            //#[ state winda2_btn5.(Entry) 
+            itsWinda_2.dodajStopWGore(5);
+            itsWinda_2.dodajStopWDol(5);
+            //#]
         }
         
     }

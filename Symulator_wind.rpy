@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 	- _id = GUID 975eb797-dbd8-4286-99ad-96aa7eb8cbc6;
 	- _myState = 8192;
 	- _name = "Symulator_wind";
-	- _modifiedTimeWeak = 6.24.2015::19:18:15;
+	- _modifiedTimeWeak = 6.25.2015::9:32:35;
 	- _UserColors = { IRPYRawContainer 
 		- size = 16;
 		- value = 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 16777215; 
@@ -180,7 +180,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 			}
 			- _name = "Model1";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "6.24.2015::19:18:15";
+			- _lastModifiedTime = "6.25.2015::9:32:37";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID ba5d9b0d-8ac0-4092-a5f3-5fb3e696ad3d;
 				- m_type = 0;
@@ -330,7 +330,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2152;
-					- m_transform = 0.212465 0 0 0.282531 942 -77.3798 ;
+					- m_transform = 0.212465 0 0 0.440284 942 -128.4 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -463,7 +463,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 							- m_name = "Operation";
 							- m_displayOption = Explicit;
 							- m_bShowInherited = 0;
-							- m_bOrdered = 0;
+							- m_bOrdered = 1;
 							- Items = { IRPYRawContainer 
 								- size = 1;
 								- value = 

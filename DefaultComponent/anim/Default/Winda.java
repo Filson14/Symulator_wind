@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: anim
 	Model Element	: Winda
-//!	Generated Date	: Wed, 24, Jun 2015 
+//!	Generated Date	: Thu, 25, Jun 2015 
 	File Path	: DefaultComponent/anim/Default/Winda.java
 *********************************************************************/
 
@@ -58,7 +58,9 @@ public class Winda implements RiJStateConcept, Animated {
     
     protected int rootState_active;		//## ignore 
     
-    public static final int Winda_Timeout_jazda_id = 1;		//## ignore 
+    public static final int Winda_Timeout_pietro_id = 1;		//## ignore 
+    
+    public static final int Winda_Timeout_jazda_id = 2;		//## ignore 
     
     
     //## statechart_method 
@@ -173,6 +175,72 @@ public class Winda implements RiJStateConcept, Animated {
         
     }
     
+    //## operation lacznaIloscPrzystankow() 
+    public int lacznaIloscPrzystankow() {
+        try {
+            animInstance().notifyMethodEntered("lacznaIloscPrzystankow",
+               new ArgData[] {
+               });
+        
+        //#[ operation lacznaIloscPrzystankow() 
+        int suma = 0;
+        for(int i=0; i<6; i++){
+        	if(maPrzystanekWGore(i) || maPrzystanekWDol(i)){
+        		suma ++;
+        	}
+        }         
+        
+        return suma;
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * @param pietro
+    */
+    //## operation maPrzystanekWDol(int) 
+    public boolean maPrzystanekWDol(int pietro) {
+        try {
+            animInstance().notifyMethodEntered("maPrzystanekWDol",
+               new ArgData[] {
+                   new ArgData(int.class, "pietro", AnimInstance.animToString(pietro))
+               });
+        
+        //#[ operation maPrzystanekWDol(int) 
+        return przystankiWDol[pietro];
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
+    /**
+     * @param pietro
+    */
+    //## operation maPrzystanekWGore(int) 
+    public boolean maPrzystanekWGore(int pietro) {
+        try {
+            animInstance().notifyMethodEntered("maPrzystanekWGore",
+               new ArgData[] {
+                   new ArgData(int.class, "pietro", AnimInstance.animToString(pietro))
+               });
+        
+        //#[ operation maPrzystanekWGore(int) 
+        return przystankiWGore[pietro];
+        //#]
+        }
+        finally {
+            animInstance().notifyMethodExit();
+        }
+        
+    }
+    
     //## operation maPrzystankiPonizej() 
     public boolean maPrzystankiPonizej() {
         try {
@@ -206,10 +274,12 @@ public class Winda implements RiJStateConcept, Animated {
         //#[ operation maPrzystankiPowyzej() 
         boolean wynik = false;
         for(int i = obecnePietro+1; i<6; i++){
-        	if(przystankiWGore[i] || przystankiWDol[i])
+        	if(przystankiWGore[i] || przystankiWDol[i]){
         		wynik = true;
-        		break;	
-        }       
+        		break;
+        	}	
+        }
+        //System.out.println("Ma przystanki powyzej: " + wynik);       
         return wynik;
         //#]
         }
@@ -290,9 +360,7 @@ public class Winda implements RiJStateConcept, Animated {
         //#[ operation wyznaczKierunek() 
         if(kierunekWGore){
         	if(!maPrzystankiPowyzej()) kierunekWGore = false;
-        }
-        
-        if(!kierunekWGore){
+        }else{
         	if(!maPrzystankiPonizej()) kierunekWGore = true;
         }
         //#]
@@ -409,14 +477,14 @@ public class Winda implements RiJStateConcept, Animated {
                     bezczynny_add(animStates);
                 }
                 break;
-                case jazda:
-                {
-                    jazda_add(animStates);
-                }
-                break;
                 case pietro:
                 {
                     pietro_add(animStates);
+                }
+                break;
+                case jazda:
+                {
+                    jazda_add(animStates);
                 }
                 break;
                 default:
@@ -441,14 +509,14 @@ public class Winda implements RiJStateConcept, Animated {
                     res = bezczynny_takeEvent(id);
                 }
                 break;
-                case jazda:
-                {
-                    res = jazda_takeEvent(id);
-                }
-                break;
                 case pietro:
                 {
                     res = pietro_takeEvent(id);
+                }
+                break;
+                case jazda:
+                {
+                    res = jazda_takeEvent(id);
                 }
                 break;
                 default:
@@ -485,9 +553,9 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public int pietro_takeEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            if(event.isTypeOf(RiJEvent.NULL_EVENT_ID))
+            if(event.isTypeOf(RiJEvent.TIMEOUT_EVENT_ID))
                 {
-                    res = pietroTakeNull();
+                    res = pietroTakeRiJTimeout();
                 }
             
             return res;
@@ -514,25 +582,31 @@ public class Winda implements RiJStateConcept, Animated {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             if(event.getTimeoutId() == Winda_Timeout_jazda_id)
                 {
-                    //## transition 3 
+                    //## transition 7 
                     if(osiagnalWlasciwePietro())
                         {
-                            animInstance().notifyTransitionStarted("2");
-                            animInstance().notifyTransitionStarted("3");
+                            animInstance().notifyTransitionStarted("5");
+                            animInstance().notifyTransitionStarted("7");
                             jazda_exit();
                             pietro_entDef();
-                            animInstance().notifyTransitionEnded("3");
-                            animInstance().notifyTransitionEnded("2");
+                            animInstance().notifyTransitionEnded("7");
+                            animInstance().notifyTransitionEnded("5");
                             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                         }
                     else
                         {
-                            animInstance().notifyTransitionStarted("2");
-                            animInstance().notifyTransitionStarted("4");
+                            animInstance().notifyTransitionStarted("5");
+                            animInstance().notifyTransitionStarted("6");
                             jazda_exit();
+                            //#[ transition 6 
+                            if(kierunekWGore)
+                             	obecnePietro++;
+                             else
+                             	obecnePietro--;
+                            //#]
                             jazda_entDef();
-                            animInstance().notifyTransitionEnded("4");
-                            animInstance().notifyTransitionEnded("2");
+                            animInstance().notifyTransitionEnded("6");
+                            animInstance().notifyTransitionEnded("5");
                             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                         }
                 }
@@ -561,7 +635,6 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public void pietro_enter() {
             animInstance().notifyStateEntered("ROOT.pietro");
-            pushNullConfig();
             rootState_subState = pietro;
             rootState_active = pietro;
             pietroEnter();
@@ -580,13 +653,10 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public void jazdaEnter() {
             //#[ state jazda.(Entry) 
-             System.out.println("Winda na pietrze " + obecnePietro);
+            System.out.println("Winda na pietrze " + obecnePietro);
             wyznaczKierunek();
                  
-            if(kierunekWGore)
-             	obecnePietro++;
-             else
-             	obecnePietro--;
+            
             //#]
             itsRiJThread.schedTimeout(2000, Winda_Timeout_jazda_id, this, "ROOT.jazda");
         }
@@ -608,9 +678,10 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public void pietroEnter() {
             //#[ state pietro.(Entry) 
-            System.out.println("Winda na pietrze " + obecnePietro);
+            System.out.println("Dojechala na pietro " + obecnePietro);
             System.out.println("Otwieram drzwi na pietrze " + obecnePietro);
             //#]
+            itsRiJThread.schedTimeout(2000, Winda_Timeout_pietro_id, this, "ROOT.pietro");
         }
         
         //## statechart_method 
@@ -634,15 +705,15 @@ public class Winda implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void pietro_exit() {
-            popNullConfig();
             pietroExit();
             animInstance().notifyStateExited("ROOT.pietro");
         }
         
         //## statechart_method 
         public void pietroExit() {
+            itsRiJThread.unschedTimeout(Winda_Timeout_pietro_id, this);
             //#[ state pietro.(Exit) 
-            System.out.println("Zamykam drzwi na pietrze " + obecnePietro);
+            System.out.println("Zamykam drzwi na pietrze " + obecnePietro + "\n");
             //#]
         }
         
@@ -656,33 +727,6 @@ public class Winda implements RiJStateConcept, Animated {
             rootState_subState = bezczynny;
             rootState_active = bezczynny;
             bezczynnyEnter();
-        }
-        
-        //## statechart_method 
-        public int pietroTakeNull() {
-            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            //## transition 6 
-            if(maZamowienia())
-                {
-                    animInstance().notifyTransitionStarted("5");
-                    animInstance().notifyTransitionStarted("6");
-                    pietro_exit();
-                    jazda_entDef();
-                    animInstance().notifyTransitionEnded("6");
-                    animInstance().notifyTransitionEnded("5");
-                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-                }
-            else
-                {
-                    animInstance().notifyTransitionStarted("5");
-                    animInstance().notifyTransitionStarted("7");
-                    pietro_exit();
-                    bezczynny_entDef();
-                    animInstance().notifyTransitionEnded("7");
-                    animInstance().notifyTransitionEnded("5");
-                    res = RiJStateReactive.TAKE_EVENT_COMPLETE;
-                }
-            return res;
         }
         
         //## statechart_method 
@@ -704,6 +748,36 @@ public class Winda implements RiJStateConcept, Animated {
                     res = jazdaTakeRiJTimeout();
                 }
             
+            return res;
+        }
+        
+        //## statechart_method 
+        public int pietroTakeRiJTimeout() {
+            int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
+            if(event.getTimeoutId() == Winda_Timeout_pietro_id)
+                {
+                    //## transition 3 
+                    if(maZamowienia())
+                        {
+                            animInstance().notifyTransitionStarted("2");
+                            animInstance().notifyTransitionStarted("3");
+                            pietro_exit();
+                            jazda_entDef();
+                            animInstance().notifyTransitionEnded("3");
+                            animInstance().notifyTransitionEnded("2");
+                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                        }
+                    else
+                        {
+                            animInstance().notifyTransitionStarted("2");
+                            animInstance().notifyTransitionStarted("4");
+                            pietro_exit();
+                            bezczynny_entDef();
+                            animInstance().notifyTransitionEnded("4");
+                            animInstance().notifyTransitionEnded("2");
+                            res = RiJStateReactive.TAKE_EVENT_COMPLETE;
+                        }
+                }
             return res;
         }
         

@@ -29,11 +29,11 @@ if "%1" == "run" goto run
 
 :clean
 echo cleaning class files
-if exist Default\Winda.class del Default\Winda.class
-if exist Default\Sterownik.class del Default\Sterownik.class
 if exist Default\Pasazer.class del Default\Pasazer.class
-if exist MainDefaultComponent.class del MainDefaultComponent.class
+if exist Default\Sterownik.class del Default\Sterownik.class
+if exist Default\Winda.class del Default\Winda.class
 if exist Default\Osoba_przed_winda.class del Default\Osoba_przed_winda.class
+if exist MainDefaultComponent.class del MainDefaultComponent.class
 
 if "%1" == "clean" goto end
 

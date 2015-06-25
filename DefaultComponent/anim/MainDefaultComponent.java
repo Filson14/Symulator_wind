@@ -4,7 +4,7 @@
 	Component	: DefaultComponent
 	Configuration 	: anim
 	Model Element	: anim
-//!	Generated Date	: Wed, 24, Jun 2015 
+//!	Generated Date	: Thu, 25, Jun 2015 
 	File Path	: DefaultComponent/anim/MainDefaultComponent.java
 *********************************************************************/
 
@@ -32,6 +32,7 @@ public class MainDefaultComponent {
       // Registering Events 
       try {
         
+            Class.forName("Default.evAlarm");
             Class.forName("Default.evCzwarteDol");
             Class.forName("Default.evCzwarteGora");
             Class.forName("Default.evDrugieDol");
@@ -43,6 +44,18 @@ public class MainDefaultComponent {
             Class.forName("Default.evTrzecieDol");
             Class.forName("Default.evTrzecieGora");
             Class.forName("Default.evUruchom");
+            Class.forName("Default.evWinda1Czwarte");
+            Class.forName("Default.evWinda1Drugie");
+            Class.forName("Default.evWinda1Parter");
+            Class.forName("Default.evWinda1Piate");
+            Class.forName("Default.evWinda1Pierwsze");
+            Class.forName("Default.evWinda1Trzecie");
+            Class.forName("Default.evWinda2Czwarte");
+            Class.forName("Default.evWinda2Drugie");
+            Class.forName("Default.evWinda2Parter");
+            Class.forName("Default.evWinda2Piate");
+            Class.forName("Default.evWinda2Pierwsze");
+            Class.forName("Default.evWinda2Trzecie");
     
         // Registering Static Classes 
         

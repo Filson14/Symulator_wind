@@ -10,8 +10,8 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
+				- m_nFlags = 2;
+				- m_showCmd = 3;
 				- m_ptMinPositionX = -1;
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
@@ -31,7 +31,7 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _id = GUID d587e6f9-d643-48ec-8674-e0f680bde59f;
 			}
 			- _UpLeft = 0 -18 ;
-			- _DownRight = 1094 463 ;
+			- _DownRight = 1099 397 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 3;
 		}
@@ -39,9 +39,9 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 2;
-				- m_showCmd = 3;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
+				- m_showCmd = 2;
+				- m_ptMinPositionX = 0;
+				- m_ptMinPositionY = 390;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -30;
 				- m_nLeft = 75;
@@ -58,8 +58,8 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "StatechartDiagram";
 				- _id = GUID 0c127e6e-a95f-4e24-b074-779d0dd13207;
 			}
-			- _UpLeft = 0 -15 ;
-			- _DownRight = 1404 599 ;
+			- _UpLeft = 0 -6 ;
+			- _DownRight = 1610 653 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 2;
 		}
@@ -86,8 +86,8 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "StatechartDiagram";
 				- _id = GUID 9ad3eab8-d307-47e8-b8a0-5b36463f3015;
 			}
-			- _UpLeft = 16 135 ;
-			- _DownRight = 1026 391 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 2021 511 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 1;
 		}
@@ -100,23 +100,23 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- m_ptMinPositionY = -1;
 				- m_ptMaxPositionX = -8;
 				- m_ptMaxPositionY = -30;
-				- m_nLeft = 0;
-				- m_nTop = 0;
-				- m_nRight = 1300;
-				- m_nBottom = 253;
+				- m_nLeft = 125;
+				- m_nTop = 125;
+				- m_nRight = 871;
+				- m_nBottom = 417;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
+				- _m2Class = "IUCDiagram";
 				- _filename = "Default.sbs";
 				- _subsystem = "Default";
-				- _class = "Winda";
-				- _name = "StatechartDiagram";
-				- _id = GUID 9ad3eab8-d307-47e8-b8a0-5b36463f3015;
+				- _class = "";
+				- _name = "przypadki_uzycia";
+				- _id = GUID 3a6904c8-1e83-4f08-b7ac-052240275a17;
 			}
-			- _UpLeft = 17 207 ;
-			- _DownRight = 1280 401 ;
-			- _instanceName = "Sterownik[0]->itsWinda_1";
+			- _UpLeft = 0 150 ;
+			- _DownRight = 834 424 ;
+			- _instanceName = "";
 			- m_nDiagramIndex = 0;
 		}
 		{ CGEMdiDiagramParams 
@@ -142,8 +142,8 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "Model1";
 				- _id = GUID 28d79ea2-0c8c-48e0-ab0b-79e11c73daf4;
 			}
-			- _UpLeft = 0 0 ;
-			- _DownRight = 1044 459 ;
+			- _UpLeft = 456 0 ;
+			- _DownRight = 1554 483 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 4;
 		}
