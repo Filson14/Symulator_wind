@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 8.0.4
-	Login		: Filson
+	Login		: Stasiu
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: evWinda1Trzecie

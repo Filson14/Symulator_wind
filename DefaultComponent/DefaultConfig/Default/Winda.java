@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 8.0.4
-	Login		: Filson
+	Login		: Stasiu
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Winda
@@ -174,9 +174,11 @@ public class Winda implements RiJStateConcept {
         //#[ operation maPrzystankiPonizej() 
         boolean wynik = false;
         for(int i = obecnePietro-1; i>=0; i--){
-        	if(przystankiWGore[i] || przystankiWDol[i])
-        		wynik = true;
-        		break;	
+        	if(przystankiWGore[i] || przystankiWDol[i])     
+        		{
+        			wynik = true;
+        			break;
+        		}	
         }       
         return wynik;
         //#]
@@ -451,7 +453,7 @@ public class Winda implements RiJStateConcept {
                     if(kierunekWGore)
                         {
                             //## transition 9 
-                            if(maPrzystankiWGore())
+                            if(maPrzystankiPowyzej())
                                 {
                                     jazda_exit();
                                     jedz_w_gore_entDef();
@@ -460,7 +462,7 @@ public class Winda implements RiJStateConcept {
                             else
                                 {
                                     //## transition 10 
-                                    if(!maPrzystankiWGore())
+                                    if(!maPrzystankiPowyzej())
                                         {
                                             jazda_exit();
                                             jedz_w_dol_entDef();
@@ -474,19 +476,19 @@ public class Winda implements RiJStateConcept {
                             if(!kierunekWGore)
                                 {
                                     //## transition 11 
-                                    if(!maPrzystankiWDol())
+                                    if(maPrzystankiPonizej())
                                         {
                                             jazda_exit();
-                                            jedz_w_gore_entDef();
+                                            jedz_w_dol_entDef();
                                             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                                         }
                                     else
                                         {
-                                            //## transition 12 
-                                            if(maPrzystankiWDol())
+                                            //## transition 16 
+                                            if(!maPrzystankiPonizej())
                                                 {
                                                     jazda_exit();
-                                                    jedz_w_dol_entDef();
+                                                    jedz_w_gore_entDef();
                                                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                                                 }
                                         }

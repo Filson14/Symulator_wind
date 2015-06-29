@@ -11,15 +11,15 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
+				- m_showCmd = 2;
+				- m_ptMinPositionX = 160;
+				- m_ptMinPositionY = 737;
 				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 100;
-				- m_nTop = 100;
-				- m_nRight = 1275;
-				- m_nBottom = 660;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 21;
+				- m_nTop = 44;
+				- m_nRight = 842;
+				- m_nBottom = 708;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -30,20 +30,20 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "PanelGUI";
 				- _id = GUID d587e6f9-d643-48ec-8674-e0f680bde59f;
 			}
-			- _UpLeft = 0 -18 ;
-			- _DownRight = 1293 551 ;
+			- _UpLeft = 34 -18 ;
+			- _DownRight = 926 669 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 4;
+			- m_nDiagramIndex = 0;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 2;
 				- m_showCmd = 3;
-				- m_ptMinPositionX = 0;
-				- m_ptMinPositionY = 267;
+				- m_ptMinPositionX = 160;
+				- m_ptMinPositionY = 452;
 				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
+				- m_ptMaxPositionY = -31;
 				- m_nLeft = 75;
 				- m_nTop = 75;
 				- m_nRight = 1300;
@@ -58,8 +58,36 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "StatechartDiagram";
 				- _id = GUID 0c127e6e-a95f-4e24-b074-779d0dd13207;
 			}
-			- _UpLeft = 0 384 ;
-			- _DownRight = 1610 839 ;
+			- _UpLeft = 20 62 ;
+			- _DownRight = 1608 649 ;
+			- _instanceName = "";
+			- m_nDiagramIndex = 4;
+		}
+		{ CGEMdiDiagramParams 
+			- _placement = { CCommon_WINDOWPLACEMENT 
+				- m_nLength = 44;
+				- m_nFlags = 0;
+				- m_showCmd = 2;
+				- m_ptMinPositionX = 320;
+				- m_ptMinPositionY = 452;
+				- m_ptMaxPositionX = -8;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 30;
+				- m_nTop = 145;
+				- m_nRight = 1280;
+				- m_nBottom = 511;
+			}
+			- _wasOpenedOnCloseProject = 1;
+			- _theDiagram = { IHandle 
+				- _m2Class = "IStateChartDiagram";
+				- _filename = "Default.sbs";
+				- _subsystem = "Default";
+				- _class = "Winda";
+				- _name = "StatechartDiagram";
+				- _id = GUID 9ad3eab8-d307-47e8-b8a0-5b36463f3015;
+			}
+			- _UpLeft = 0 69 ;
+			- _DownRight = 1064 337 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 3;
 		}
@@ -67,15 +95,15 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
+				- m_showCmd = 2;
+				- m_ptMinPositionX = 0;
+				- m_ptMinPositionY = 737;
 				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 125;
-				- m_nTop = 125;
-				- m_nRight = 1375;
-				- m_nBottom = 491;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 329;
+				- m_nTop = 212;
+				- m_nRight = 1561;
+				- m_nBottom = 833;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -86,48 +114,20 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "StatechartDiagram";
 				- _id = GUID 9ad3eab8-d307-47e8-b8a0-5b36463f3015;
 			}
-			- _UpLeft = 0 160 ;
-			- _DownRight = 1516 544 ;
-			- _instanceName = "";
-			- m_nDiagramIndex = 2;
-		}
-		{ CGEMdiDiagramParams 
-			- _placement = { CCommon_WINDOWPLACEMENT 
-				- m_nLength = 44;
-				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
-				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 50;
-				- m_nTop = 50;
-				- m_nRight = 963;
-				- m_nBottom = 238;
-			}
-			- _wasOpenedOnCloseProject = 1;
-			- _theDiagram = { IHandle 
-				- _m2Class = "IStateChartDiagram";
-				- _filename = "Default.sbs";
-				- _subsystem = "Default";
-				- _class = "Winda";
-				- _name = "StatechartDiagram";
-				- _id = GUID 9ad3eab8-d307-47e8-b8a0-5b36463f3015;
-			}
-			- _UpLeft = 0 62 ;
-			- _DownRight = 1095 223 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 1096 514 ;
 			- _instanceName = "Sterownik[0]->itsWinda_1";
-			- m_nDiagramIndex = 0;
+			- m_nDiagramIndex = 1;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 0;
-				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
+				- m_showCmd = 2;
+				- m_ptMinPositionX = 480;
+				- m_ptMinPositionY = 452;
 				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
+				- m_ptMaxPositionY = -31;
 				- m_nLeft = 125;
 				- m_nTop = 125;
 				- m_nRight = 871;
@@ -142,24 +142,24 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "przypadki_uzycia";
 				- _id = GUID 3a6904c8-1e83-4f08-b7ac-052240275a17;
 			}
-			- _UpLeft = 0 150 ;
-			- _DownRight = 834 424 ;
+			- _UpLeft = 0 0 ;
+			- _DownRight = 837 274 ;
 			- _instanceName = "";
-			- m_nDiagramIndex = 1;
+			- m_nDiagramIndex = 2;
 		}
 		{ CGEMdiDiagramParams 
 			- _placement = { CCommon_WINDOWPLACEMENT 
 				- m_nLength = 44;
 				- m_nFlags = 0;
 				- m_showCmd = 1;
-				- m_ptMinPositionX = -1;
-				- m_ptMinPositionY = -1;
+				- m_ptMinPositionX = 0;
+				- m_ptMinPositionY = 433;
 				- m_ptMaxPositionX = -8;
-				- m_ptMaxPositionY = -30;
-				- m_nLeft = 25;
-				- m_nTop = 25;
-				- m_nRight = 1200;
-				- m_nBottom = 585;
+				- m_ptMaxPositionY = -31;
+				- m_nLeft = 291;
+				- m_nTop = 41;
+				- m_nRight = 1466;
+				- m_nBottom = 601;
 			}
 			- _wasOpenedOnCloseProject = 1;
 			- _theDiagram = { IHandle 
@@ -170,13 +170,13 @@ I-Logix-RPY-Archive version 8.8.0 * 6118532
 				- _name = "Model1";
 				- _id = GUID 28d79ea2-0c8c-48e0-ab0b-79e11c73daf4;
 			}
-			- _UpLeft = 456 60 ;
-			- _DownRight = 1554 543 ;
+			- _UpLeft = 154 0 ;
+			- _DownRight = 1402 549 ;
 			- _instanceName = "";
 			- m_nDiagramIndex = 5;
 		}
 	}
-	- _fullName = "E:\\Filson\\Dropbox\\Studia\\Semestr 6\\Systemy Czasu Rzeczywistego\\Projekt\\Symulator_wind\\Symulator_wind";
+	- _fullName = "C:\\Users\\Stasiu\\Downloads\\Symulator_wind-master (1)\\Symulator_wind-master\\Symulator_wind";
 	- m_SearchScopeList = { IRPYRawContainer 
 		- size = 0;
 	}

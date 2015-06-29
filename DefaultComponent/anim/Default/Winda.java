@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.0.4
-	Login		: Filson
+	Login		: Stasiu
 	Component	: DefaultComponent
 	Configuration 	: anim
 	Model Element	: Winda
-//!	Generated Date	: Thu, 25, Jun 2015 
+//!	Generated Date	: Fri, 26, Jun 2015 
 	File Path	: DefaultComponent/anim/Default/Winda.java
 *********************************************************************/
 
@@ -254,9 +254,11 @@ public class Winda implements RiJStateConcept, Animated {
         //#[ operation maPrzystankiPonizej() 
         boolean wynik = false;
         for(int i = obecnePietro-1; i>=0; i--){
-        	if(przystankiWGore[i] || przystankiWDol[i])
-        		wynik = true;
-        		break;	
+        	if(przystankiWGore[i] || przystankiWDol[i])     
+        		{
+        			wynik = true;
+        			break;
+        		}	
         }       
         return wynik;
         //#]
@@ -391,12 +393,7 @@ public class Winda implements RiJStateConcept, Animated {
     
     //## auto_generated 
     public void setKierunekWGore(boolean p_kierunekWGore) {
-        try {
         kierunekWGore = p_kierunekWGore;
-        }
-        finally {
-            animInstance().notifyUpdatedAttr();
-        }
     }
     
     //## auto_generated 
@@ -475,6 +472,11 @@ public class Winda implements RiJStateConcept, Animated {
         public void rootState_add(AnimStates animStates) {
             animStates.add("ROOT");
             switch (rootState_subState) {
+                case jazda:
+                {
+                    jazda_add(animStates);
+                }
+                break;
                 case bezczynny:
                 {
                     bezczynny_add(animStates);
@@ -483,11 +485,6 @@ public class Winda implements RiJStateConcept, Animated {
                 case pietro:
                 {
                     pietro_add(animStates);
-                }
-                break;
-                case jazda:
-                {
-                    jazda_add(animStates);
                 }
                 break;
                 case jedz_w_gore:
@@ -522,6 +519,11 @@ public class Winda implements RiJStateConcept, Animated {
         public int rootState_dispatchEvent(short id) {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
             switch (rootState_active) {
+                case jazda:
+                {
+                    res = jazda_takeEvent(id);
+                }
+                break;
                 case bezczynny:
                 {
                     res = bezczynny_takeEvent(id);
@@ -530,11 +532,6 @@ public class Winda implements RiJStateConcept, Animated {
                 case pietro:
                 {
                     res = pietro_takeEvent(id);
-                }
-                break;
-                case jazda:
-                {
-                    res = jazda_takeEvent(id);
                 }
                 break;
                 case jedz_w_gore:
@@ -659,14 +656,14 @@ public class Winda implements RiJStateConcept, Animated {
                             //## transition 9 
                             if(maPrzystankiPowyzej())
                                 {
-                                    animInstance().notifyTransitionStarted("13");
+                                    animInstance().notifyTransitionStarted("12");
                                     animInstance().notifyTransitionStarted("7");
                                     animInstance().notifyTransitionStarted("9");
                                     jazda_exit();
                                     jedz_w_gore_entDef();
                                     animInstance().notifyTransitionEnded("9");
                                     animInstance().notifyTransitionEnded("7");
-                                    animInstance().notifyTransitionEnded("13");
+                                    animInstance().notifyTransitionEnded("12");
                                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                                 }
                             else
@@ -674,14 +671,14 @@ public class Winda implements RiJStateConcept, Animated {
                                     //## transition 10 
                                     if(!maPrzystankiPowyzej())
                                         {
-                                            animInstance().notifyTransitionStarted("13");
+                                            animInstance().notifyTransitionStarted("12");
                                             animInstance().notifyTransitionStarted("7");
                                             animInstance().notifyTransitionStarted("10");
                                             jazda_exit();
                                             jedz_w_dol_entDef();
                                             animInstance().notifyTransitionEnded("10");
                                             animInstance().notifyTransitionEnded("7");
-                                            animInstance().notifyTransitionEnded("13");
+                                            animInstance().notifyTransitionEnded("12");
                                             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                                         }
                                 }
@@ -692,31 +689,31 @@ public class Winda implements RiJStateConcept, Animated {
                             if(!kierunekWGore)
                                 {
                                     //## transition 11 
-                                    if(!maPrzystankiPonizej())
+                                    if(maPrzystankiPonizej())
                                         {
-                                            animInstance().notifyTransitionStarted("13");
+                                            animInstance().notifyTransitionStarted("12");
                                             animInstance().notifyTransitionStarted("8");
                                             animInstance().notifyTransitionStarted("11");
                                             jazda_exit();
-                                            jedz_w_gore_entDef();
+                                            jedz_w_dol_entDef();
                                             animInstance().notifyTransitionEnded("11");
                                             animInstance().notifyTransitionEnded("8");
-                                            animInstance().notifyTransitionEnded("13");
+                                            animInstance().notifyTransitionEnded("12");
                                             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                                         }
                                     else
                                         {
-                                            //## transition 12 
-                                            if(maPrzystankiPonizej())
+                                            //## transition 16 
+                                            if(!maPrzystankiPonizej())
                                                 {
-                                                    animInstance().notifyTransitionStarted("13");
-                                                    animInstance().notifyTransitionStarted("8");
                                                     animInstance().notifyTransitionStarted("12");
+                                                    animInstance().notifyTransitionStarted("8");
+                                                    animInstance().notifyTransitionStarted("16");
                                                     jazda_exit();
-                                                    jedz_w_dol_entDef();
-                                                    animInstance().notifyTransitionEnded("12");
+                                                    jedz_w_gore_entDef();
+                                                    animInstance().notifyTransitionEnded("16");
                                                     animInstance().notifyTransitionEnded("8");
-                                                    animInstance().notifyTransitionEnded("13");
+                                                    animInstance().notifyTransitionEnded("12");
                                                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                                                 }
                                         }
@@ -753,10 +750,10 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public int jedz_w_dolTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("15");
+            animInstance().notifyTransitionStarted("14");
             jedz_w_dol_exit();
             kierunekUstalony_entDef();
-            animInstance().notifyTransitionEnded("15");
+            animInstance().notifyTransitionEnded("14");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -764,10 +761,10 @@ public class Winda implements RiJStateConcept, Animated {
         //## statechart_method 
         public int jedz_w_goreTakeNull() {
             int res = RiJStateReactive.TAKE_EVENT_NOT_CONSUMED;
-            animInstance().notifyTransitionStarted("14");
+            animInstance().notifyTransitionStarted("13");
             jedz_w_gore_exit();
             kierunekUstalony_entDef();
-            animInstance().notifyTransitionEnded("14");
+            animInstance().notifyTransitionEnded("13");
             res = RiJStateReactive.TAKE_EVENT_COMPLETE;
             return res;
         }
@@ -778,17 +775,17 @@ public class Winda implements RiJStateConcept, Animated {
             //## transition 6 
             if(osiagnalWlasciwePietro())
                 {
-                    animInstance().notifyTransitionStarted("16");
+                    animInstance().notifyTransitionStarted("15");
                     animInstance().notifyTransitionStarted("6");
                     kierunekUstalony_exit();
                     pietro_entDef();
                     animInstance().notifyTransitionEnded("6");
-                    animInstance().notifyTransitionEnded("16");
+                    animInstance().notifyTransitionEnded("15");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             else
                 {
-                    animInstance().notifyTransitionStarted("16");
+                    animInstance().notifyTransitionStarted("15");
                     animInstance().notifyTransitionStarted("5");
                     kierunekUstalony_exit();
                     //#[ transition 5 
@@ -799,7 +796,7 @@ public class Winda implements RiJStateConcept, Animated {
                     //#]
                     jazda_entDef();
                     animInstance().notifyTransitionEnded("5");
-                    animInstance().notifyTransitionEnded("16");
+                    animInstance().notifyTransitionEnded("15");
                     res = RiJStateReactive.TAKE_EVENT_COMPLETE;
                 }
             return res;

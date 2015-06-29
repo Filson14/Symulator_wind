@@ -1,8 +1,8 @@
 echo off
 
-set RHAP_JARS_DIR=e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib
-set FRAMEWORK_NONE_JARS=e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxf.jar;e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\anim.jar;e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\animcom.jar;e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxfInstMock.jar;
-set FRAMEWORK_ANIM_JARS=e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxf.jar;e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\anim.jar;e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\animcom.jar;e:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxfInst.jar;
+set RHAP_JARS_DIR=C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib
+set FRAMEWORK_NONE_JARS=C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxf.jar;C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\anim.jar;C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\animcom.jar;C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxfInstMock.jar;
+set FRAMEWORK_ANIM_JARS=C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxf.jar;C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\anim.jar;C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\animcom.jar;C:/Program Files/IBM/Rational/Rhapsody/8.0.4/Share\LangJava\lib\oxfInst.jar;
 set SOURCEPATH=%SOURCEPATH%
 set CLASSPATH=%CLASSPATH%;.
 set PATH=%RHAP_JARS_DIR%;%PATH%;
@@ -29,11 +29,11 @@ if "%1" == "run" goto run
 
 :clean
 echo cleaning class files
-if exist Default\Winda.class del Default\Winda.class
-if exist Default\Pasazer.class del Default\Pasazer.class
-if exist MainDefaultComponent.class del MainDefaultComponent.class
 if exist Default\Sterownik.class del Default\Sterownik.class
 if exist Default\Osoba_przed_winda.class del Default\Osoba_przed_winda.class
+if exist Default\Winda.class del Default\Winda.class
+if exist MainDefaultComponent.class del MainDefaultComponent.class
+if exist Default\Pasazer.class del Default\Pasazer.class
 
 if "%1" == "clean" goto end
 

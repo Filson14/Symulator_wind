@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.0.4
-	Login		: Filson
+	Login		: Stasiu
 	Component	: DefaultComponent
 	Configuration 	: anim
 	Model Element	: Pasazer
-//!	Generated Date	: Mon, 22, Jun 2015 
+//!	Generated Date	: Thu, 25, Jun 2015 
 	File Path	: DefaultComponent/anim/Default/Pasazer.java
 *********************************************************************/
 

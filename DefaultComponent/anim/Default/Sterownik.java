@@ -1,6 +1,6 @@
 /*********************************************************************
 	Rhapsody	: 8.0.4
-	Login		: Filson
+	Login		: Stasiu
 	Component	: DefaultComponent
 	Configuration 	: anim
 	Model Element	: Sterownik
@@ -756,7 +756,12 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void CzwarteGoraEnter() {
             //#[ state CzwarteGora.(Entry) 
              System.out.println("Wezwanie: Czwarte, do gory");     
-             itsWinda_1.dodajStopWGore(4);
+            Winda winda = wyznaczWinde(4, true);
+            if(winda != null){
+            	winda.dodajStopWGore(4); 
+            	winda.gen(new evUruchom());
+            }
+            
             //#]
         }
         
@@ -944,7 +949,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void PiateDolEnter() {
             //#[ state PiateDol.(Entry) 
              System.out.println("Wezwanie: Piate, na dol");   
-             itsWinda_1.dodajStopWDol(5);
+            Winda winda = wyznaczWinde(5, false);
+            if(winda != null){
+            	winda.dodajStopWDol(5); 
+            	winda.gen(new evUruchom());
+            }
             //#]
         }
         
@@ -1039,7 +1048,13 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void PierwszeDolEnter() {
             //#[ state PierwszeDol.(Entry) 
             System.out.println("Wezwanie: Pierwsze, na dol");   
-            itsWinda_1.dodajStopWDol(1);
+            
+            Winda winda = wyznaczWinde(1, false);
+            if(winda != null){
+            	winda.dodajStopWDol(1); 
+            	winda.gen(new evUruchom());
+            }
+            
             //#]
         }
         
@@ -1254,9 +1269,6 @@ public class Sterownik implements RiJStateConcept, Animated {
         
         //## statechart_method 
         public void state_15Enter() {
-            //#[ state state_15.(Entry) 
-              itsWinda_1.gen(new evUruchom());
-            //#]
         }
         
         //## statechart_method 
@@ -1948,7 +1960,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void TrzecieDolEnter() {
             //#[ state TrzecieDol.(Entry) 
             System.out.println("Wezwanie: Trzecie, na dol");             
-            itsWinda_1.dodajStopWDol(3);
+            Winda winda = wyznaczWinde(3, false);
+            if(winda != null){
+            	winda.dodajStopWDol(3); 
+            	winda.gen(new evUruchom());
+            }
             //#]
         }
         
@@ -1998,8 +2014,13 @@ public class Sterownik implements RiJStateConcept, Animated {
         //## statechart_method 
         public void ParterGoraEnter() {
             //#[ state ParterGora.(Entry) 
-            System.out.println("Wezwanie: Parter, do gory");
-            itsWinda_1.dodajStopWGore(0);
+            System.out.println("Wezwanie: Parter, do gory"); 
+            Winda winda = wyznaczWinde(0, true);
+            if(winda != null){
+            	winda.dodajStopWGore(0); 
+            	winda.gen(new evUruchom());
+            }
+            
             //#]
         }
         
@@ -2128,7 +2149,12 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void PierwszeGoraEnter() {
             //#[ state PierwszeGora.(Entry) 
             System.out.println("Wezwanie: Pierwsze, do gory");
-            itsWinda_1.dodajStopWGore(1);
+            Winda winda = wyznaczWinde(1, true);
+            if(winda != null){
+            	winda.dodajStopWGore(1); 
+            	winda.gen(new evUruchom());
+            }
+            
             //#]
         }
         
@@ -2216,7 +2242,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void DrugieDolEnter() {
             //#[ state DrugieDol.(Entry) 
              System.out.println("Wezwanie: Drugie, na dol");  
-             itsWinda_1.dodajStopWDol(2);
+            Winda winda = wyznaczWinde(2, false);
+            if(winda != null){
+            	winda.dodajStopWDol(2); 
+            	winda.gen(new evUruchom());
+            }
             //#]
         }
         
@@ -2224,7 +2254,12 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void DrugieGoraEnter() {
             //#[ state DrugieGora.(Entry) 
             System.out.println("Wezwanie: Drugie, do gory"); 
-            itsWinda_1.dodajStopWGore(2);
+            Winda winda = wyznaczWinde(2, true);
+            if(winda != null){
+            	winda.dodajStopWGore(2); 
+            	winda.gen(new evUruchom());
+            }
+            
             //#]
         }
         
@@ -2258,7 +2293,12 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void TrzecieGoraEnter() {
             //#[ state TrzecieGora.(Entry) 
              System.out.println("Wezwanie: Trzecie, do gory");
-            itsWinda_1.dodajStopWGore(3);
+            Winda winda = wyznaczWinde(3, true);
+            if(winda != null){
+            	winda.dodajStopWGore(3); 
+            	winda.gen(new evUruchom());
+            }
+            
             //#]
         }
         
@@ -2342,7 +2382,11 @@ public class Sterownik implements RiJStateConcept, Animated {
         public void CzwarteDolEnter() {
             //#[ state CzwarteDol.(Entry) 
                System.out.println("Wezwanie: Czwarte, na dol");    
-               itsWinda_1.dodajStopWDol(4);
+            Winda winda = wyznaczWinde(4, false);
+            if(winda != null){
+            	winda.dodajStopWDol(4); 
+            	winda.gen(new evUruchom());
+            }
             //#]
         }
         

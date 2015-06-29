@@ -1,10 +1,10 @@
 /*********************************************************************
 	Rhapsody	: 8.0.4
-	Login		: Filson
+	Login		: Stasiu
 	Component	: DefaultComponent
 	Configuration 	: DefaultConfig
 	Model Element	: Osoba_przed_winda
-//!	Generated Date	: Mon, 22, Jun 2015 
+//!	Generated Date	: Thu, 25, Jun 2015 
 	File Path	: DefaultComponent/DefaultConfig/Default/Osoba_przed_winda.java
 *********************************************************************/
 

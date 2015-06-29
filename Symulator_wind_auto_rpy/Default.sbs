@@ -3,7 +3,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 	- _id = GUID e44b63fa-8f41-4ffb-9d9b-bea8aadd7fa2;
 	- _myState = 8192;
 	- _name = "Default";
-	- _modifiedTimeWeak = 6.25.2015::18:59:48;
+	- _modifiedTimeWeak = 6.26.2015::10:0:53;
 	- _lastID = 15;
 	- Declaratives = { IRPYRawContainer 
 		- size = 2;
@@ -211,7 +211,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 			}
 			- _name = "przypadki_uzycia";
 			- _modifiedTimeWeak = 1.2.1990::0:0:0;
-			- _lastModifiedTime = "6.22.2015::13:3:5";
+			- _lastModifiedTime = "6.26.2015::10:5:42";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 7741c881-cdd7-4d07-8363-683ea02f9a81;
 				- m_type = 0;
@@ -328,7 +328,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0489381 0 0 0.124343 180 43 ;
+					- m_transform = 0.0489381 0 0 0.124343 559 79 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -372,7 +372,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.0489381 0 0 0.124343 182 342 ;
+					- m_transform = 0.0489381 0 0 0.124343 561 378 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -402,7 +402,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 					}
 					- m_pParent = GUID 8397cbbd-c815-4eeb-b840-94fd0b26fb90;
 					- m_name = { CGIText 
-						- m_str = "System Boundary Box";
+						- m_str = "System Wind";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -415,7 +415,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.453583 0 0 0.472581 407 58 ;
+					- m_transform = 0.453583 0 0 0.472581 786 94 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 0  0 1240  1228 1240  1228 0  ;
 					- m_nNameFormat = 0;
@@ -1715,8 +1715,8 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 				}
 			}
 			- _name = "PanelGUI";
-			- _modifiedTimeWeak = 6.25.2015::10:2:47;
-			- _lastModifiedTime = "6.25.2015::10:10:34";
+			- _modifiedTimeWeak = 6.26.2015::10:0:53;
+			- _lastModifiedTime = "6.26.2015::10:2:19";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 958712c1-69a9-45c8-b8c3-f95d6430df2a;
 				- m_type = 0;
@@ -1740,7 +1740,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 				}
 				- m_drawBehavior = 0;
 				- m_bIsPreferencesInitialized = 0;
-				- elementList = 42;
+				- elementList = 41;
 				{ CGIBox 
 					- _id = GUID c88496bb-8b00-435d-962c-0bf1708b654c;
 					- m_type = 215;
@@ -1837,7 +1837,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 1 0 0 1 555 -2 ;
+					- m_transform = 1 0 0 1 1246 116 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 47 29  249 29  249 389  47 389  ;
 				}
@@ -1907,6 +1907,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
+					- m_transform = 1 0 0 1 515 116 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 47 29  249 29  249 389  47 389  ;
 				}
@@ -1963,7 +1964,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 90 123 ;
+					- m_transform = 0.000398136 0 0 0.000339893 605 239 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2036,7 +2037,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 164 123 ;
+					- m_transform = 0.000398136 0 0 0.000339893 679 239 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2109,7 +2110,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 90 192 ;
+					- m_transform = 0.000398136 0 0 0.000339893 605 308 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2182,7 +2183,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 164 192 ;
+					- m_transform = 0.000398136 0 0 0.000339893 679 308 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2255,7 +2256,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 90 261 ;
+					- m_transform = 0.000398136 0 0 0.000339893 605 377 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2328,7 +2329,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 164 261 ;
+					- m_transform = 0.000398136 0 0 0.000339893 679 377 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2401,7 +2402,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 647 119 ;
+					- m_transform = 0.000398136 0 0 0.000339893 1338 237 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2474,7 +2475,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 721 119 ;
+					- m_transform = 0.000398136 0 0 0.000339893 1412 237 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2547,7 +2548,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 647 188 ;
+					- m_transform = 0.000398136 0 0 0.000339893 1338 306 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2620,7 +2621,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 721 188 ;
+					- m_transform = 0.000398136 0 0 0.000339893 1412 306 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2693,7 +2694,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 647 257 ;
+					- m_transform = 0.000398136 0 0 0.000339893 1338 375 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2766,7 +2767,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000398136 0 0 0.000339893 721 257 ;
+					- m_transform = 0.000398136 0 0 0.000339893 1412 375 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2800,12 +2801,18 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 									{ IPropertyMetaclass 
 										- _Name = "PushButton";
 										- Properties = { IRPYRawContainer 
-											- size = 1;
+											- size = 2;
 											- value = 
 											{ IProperty 
 												- _Name = "ButtonFont";
 												- _Value = "Arial 14 Bold NoItalic";
 												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "ShowName";
+												- _Value = "None";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "";
 											}
 										}
 									}
@@ -2815,11 +2822,12 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 					}
 					- m_type = 227;
 					- m_pModelObject = { IHandle 
-						- _m2Class = "";
+						- _m2Class = "IReception";
+						- _id = GUID d0a112cf-b7ce-4923-a302-848042db212f;
 					}
 					- m_pParent = GUID c88496bb-8b00-435d-962c-0bf1708b654c;
 					- m_name = { CGIText 
-						- m_str = "pushbutton_5";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -2831,8 +2839,8 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 1;
 					}
-					- m_drawBehavior = 4096;
-					- m_transform = 0.00110701 0 0 0.000339893 648 326 ;
+					- m_drawBehavior = 8192;
+					- m_transform = 0.00110701 0 0 0.000339893 1339 444 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -2840,10 +2848,15 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 					- Compartments = { IRPYRawContainer 
 						- size = 0;
 					}
-					- m_csModelObjPath = "";
+					- m_csModelObjPath = "Default.Winda[0].evAlarm";
 					- m_csName = "pushbutton_5";
 					- m_PartsArray = { IRPYRawContainer 
-						- size = 0;
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IClass";
+							- _id = GUID 24594c34-90ea-49f0-8b7f-7918832a1e72;
+						}
 					}
 					- m_csButtonCaption = "Alarm";
 				}
@@ -2914,7 +2927,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000291319 0 0 0.000305032 138 62 ;
+					- m_transform = 0.000291319 0 0 0.000305032 653 178 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3000,7 +3013,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000291319 0 0 0.000305032 693 63 ;
+					- m_transform = 0.000291319 0 0 0.000305032 1384 181 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3080,7 +3093,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 90 30 ;
+					- m_transform = 0.75 0 0 0.75 672 123 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 421 74  504 74  504 198  421 198  ;
 				}
@@ -3137,7 +3150,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 423 147 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1005 240 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3210,7 +3223,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 423 114 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1005 207 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3301,7 +3314,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 98 30 ;
+					- m_transform = 0.75 0 0 0.75 680 123 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 428 77  464 77  464 107  428 107  ;
 					- m_text = "4";
@@ -3367,7 +3380,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 90 -73 ;
+					- m_transform = 0.75 0 0 0.75 672 20 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 421 74  504 74  504 198  421 198  ;
 				}
@@ -3424,7 +3437,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 423 24 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1005 117 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3515,7 +3528,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 98 -73 ;
+					- m_transform = 0.75 0 0 0.75 680 20 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 428 77  464 77  464 107  428 107  ;
 					- m_text = "5";
@@ -3581,7 +3594,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 90 130 ;
+					- m_transform = 0.75 0 0 0.75 672 223 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 421 74  504 74  504 198  421 198  ;
 				}
@@ -3638,7 +3651,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 423 247 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1005 340 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3711,7 +3724,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 423 214 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1005 307 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3802,7 +3815,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 98 130 ;
+					- m_transform = 0.75 0 0 0.75 680 223 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 428 77  464 77  464 107  428 107  ;
 					- m_text = "3";
@@ -3868,7 +3881,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 92 232 ;
+					- m_transform = 0.75 0 0 0.75 674 325 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 421 74  504 74  504 198  421 198  ;
 				}
@@ -3925,7 +3938,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 425 349 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1007 442 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -3998,7 +4011,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 425 316 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1007 409 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -4089,7 +4102,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 100 232 ;
+					- m_transform = 0.75 0 0 0.75 682 325 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 428 77  464 77  464 107  428 107  ;
 					- m_text = "2";
@@ -4155,7 +4168,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 92 333 ;
+					- m_transform = 0.75 0 0 0.75 674 426 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 421 74  504 74  504 198  421 198  ;
 				}
@@ -4212,7 +4225,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 425 450 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1007 543 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -4285,7 +4298,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 425 417 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1007 510 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -4376,7 +4389,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 100 333 ;
+					- m_transform = 0.75 0 0 0.75 682 426 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 428 77  464 77  464 107  428 107  ;
 					- m_text = "1";
@@ -4442,7 +4455,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 92 433 ;
+					- m_transform = 0.75 0 0 0.75 674 526 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 421 74  504 74  504 198  421 198  ;
 				}
@@ -4499,7 +4512,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 1;
 					}
 					- m_drawBehavior = 8192;
-					- m_transform = 0.000262187 0 0 0.000228774 425 525 ;
+					- m_transform = 0.000262187 0 0 0.000228774 1007 618 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -4590,76 +4603,10 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_drawBehavior = 4096;
-					- m_transform = 0.75 0 0 0.75 100 433 ;
+					- m_transform = 0.75 0 0 0.75 682 526 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_points = 4 428 77  464 77  464 107  428 107  ;
 					- m_text = "P";
-				}
-				{ CGIActiveX 
-					- _id = GUID cb017ad6-2c87-4910-bd25-3345fbc3d778;
-					- _properties = { IPropertyContainer 
-						- Subjects = { IRPYRawContainer 
-							- size = 1;
-							- value = 
-							{ IPropertySubject 
-								- _Name = "Format";
-								- Metaclasses = { IRPYRawContainer 
-									- size = 1;
-									- value = 
-									{ IPropertyMetaclass 
-										- _Name = "Led";
-										- Properties = { IRPYRawContainer 
-											- size = 1;
-											- value = 
-											{ IProperty 
-												- _Name = "ActiveXProperties@Child.ActiveXControl";
-												- _Value = "BackColor;16777215;BlackWhenOff;0;Blinking;0;BlinkingTimeMillisec;300;Color;2;State;0;Style;0;";
-												- _Type = String;
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					- m_type = 219;
-					- m_pModelObject = { IHandle 
-						- _m2Class = "IAttribute";
-						- _id = GUID 42ecfb94-e2ae-42e2-a18c-e696b8fda21b;
-					}
-					- m_pParent = GUID c88496bb-8b00-435d-962c-0bf1708b654c;
-					- m_name = { CGIText 
-						- m_str = "led_0";
-						- m_style = "Arial" 10 0 0 0 1 ;
-						- m_color = { IColor 
-							- m_fgColor = 0;
-							- m_bgColor = 0;
-							- m_bgFlag = 0;
-						}
-						- m_position = 1 0 0  ;
-						- m_nIdent = 0;
-						- m_bImplicitSetRectPoints = 0;
-						- m_nOrientationCtrlPt = 1;
-					}
-					- m_drawBehavior = 4096;
-					- m_transform = 0.000126238 0 0 0.000113298 276 21 ;
-					- m_bIsPreferencesInitialized = 1;
-					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
-					- m_nNameFormat = 0;
-					- m_nIsNameFormat = 0;
-					- Compartments = { IRPYRawContainer 
-						- size = 0;
-					}
-					- m_csModelObjPath = "Default.Winda[0].kierunekWGore";
-					- m_csName = "led_0";
-					- m_PartsArray = { IRPYRawContainer 
-						- size = 1;
-						- value = 
-						{ IHandle 
-							- _m2Class = "IClass";
-							- _id = GUID 24594c34-90ea-49f0-8b7f-7918832a1e72;
-						}
-					}
 				}
 				{ CGIMFCCtrl 
 					- _id = GUID d44d98c2-4eb0-4206-a831-9d0f5ea00141;
@@ -4675,12 +4622,18 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 									{ IPropertyMetaclass 
 										- _Name = "PushButton";
 										- Properties = { IRPYRawContainer 
-											- size = 1;
+											- size = 2;
 											- value = 
 											{ IProperty 
 												- _Name = "ButtonFont";
 												- _Value = "Arial 14 Bold NoItalic";
 												- _Type = String;
+											}
+											{ IProperty 
+												- _Name = "ShowName";
+												- _Value = "None";
+												- _Type = Enum;
+												- _ExtraTypeInfo = "";
 											}
 										}
 									}
@@ -4690,11 +4643,12 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 					}
 					- m_type = 227;
 					- m_pModelObject = { IHandle 
-						- _m2Class = "";
+						- _m2Class = "IReception";
+						- _id = GUID d0a112cf-b7ce-4923-a302-848042db212f;
 					}
 					- m_pParent = GUID c88496bb-8b00-435d-962c-0bf1708b654c;
 					- m_name = { CGIText 
-						- m_str = "pushbutton_5";
+						- m_str = "";
 						- m_style = "Arial" 10 0 0 0 1 ;
 						- m_color = { IColor 
 							- m_fgColor = 0;
@@ -4706,8 +4660,8 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 1;
 					}
-					- m_drawBehavior = 4096;
-					- m_transform = 0.00110701 0 0 0.000339893 92 324 ;
+					- m_drawBehavior = 8192;
+					- m_transform = 0.00110701 0 0 0.000339893 607 440 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_polygon = 4 0 -1114  0 113628  102980 113628  102980 -1114  ;
 					- m_nNameFormat = 0;
@@ -4715,10 +4669,15 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 					- Compartments = { IRPYRawContainer 
 						- size = 0;
 					}
-					- m_csModelObjPath = "";
+					- m_csModelObjPath = "Default.Winda[0].evAlarm";
 					- m_csName = "pushbutton_5";
 					- m_PartsArray = { IRPYRawContainer 
-						- size = 0;
+						- size = 1;
+						- value = 
+						{ IHandle 
+							- _m2Class = "IClass";
+							- _id = GUID 24594c34-90ea-49f0-8b7f-7918832a1e72;
+						}
 					}
 					- m_csButtonCaption = "Alarm";
 				}
@@ -4741,7 +4700,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 			}
 		}
 	}
-	- weakCGTime = 6.25.2015::18:59:48;
+	- weakCGTime = 6.26.2015::10:0:53;
 	- strongCGTime = 1.2.1990::0:0:0;
 	- _defaultComposite = GUID 517155c1-1991-4cc6-b632-2b952754249d;
 	- _eventsBaseID = 18616;
@@ -4752,8 +4711,8 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 			- _id = GUID 517155c1-1991-4cc6-b632-2b952754249d;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _modifiedTimeWeak = 6.25.2015::10:20:23;
-			- weakCGTime = 6.25.2015::10:20:23;
+			- _modifiedTimeWeak = 6.25.2015::18:59:48;
+			- weakCGTime = 6.25.2015::18:59:48;
 			- strongCGTime = 1.2.1990::0:0:0;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -4765,7 +4724,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 			- _id = GUID 24594c34-90ea-49f0-8b7f-7918832a1e72;
 			- _myState = 8192;
 			- _name = "Winda";
-			- _modifiedTimeWeak = 6.25.2015::19:2:39;
+			- _modifiedTimeWeak = 6.26.2015::10:3:53;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _filename = "";
@@ -4775,7 +4734,7 @@ I-Logix-RPY-Archive version 8.8.0 Java 6118532
 				- _id = GUID 28d79ea2-0c8c-48e0-ab0b-79e11c73daf4;
 			}
 			- _lastID = 21;
-			- weakCGTime = 6.25.2015::19:2:39;
+			- weakCGTime = 6.26.2015::10:3:53;
 			- strongCGTime = 6.24.2015::18:35:7;
 			- Operations = { IRPYRawContainer 
 				- size = 13;
@@ -5342,7 +5301,7 @@ return suma;";
 					- _id = GUID 42ecfb94-e2ae-42e2-a18c-e696b8fda21b;
 					- _myState = 8192;
 					- _name = "kierunekWGore";
-					- _modifiedTimeWeak = 6.24.2015::20:47:13;
+					- _modifiedTimeWeak = 6.26.2015::10:1:28;
 					- ValueSpecifications = { IRPYRawContainer 
 						- size = 1;
 						- value = 
@@ -5375,9 +5334,9 @@ return suma;";
 					- _id = GUID 50300c88-1b7e-4d9f-b45a-e7c1d6be882b;
 					- _myState = 10240;
 					- _name = "statechart_10";
-					- _modifiedTimeWeak = 6.25.2015::18:41:37;
+					- _modifiedTimeWeak = 6.26.2015::10:3:53;
 					- _lastID = 36;
-					- weakCGTime = 6.25.2015::18:41:37;
+					- weakCGTime = 6.26.2015::10:3:53;
 					- strongCGTime = 6.24.2015::18:35:7;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -6052,8 +6011,8 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 6.25.2015::18:41:37;
-							- _lastModifiedTime = "6.25.2015::18:41:37";
+							- _modifiedTimeWeak = 6.26.2015::10:3:53;
+							- _lastModifiedTime = "6.26.2015::10:3:53";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID 41caddc2-4793-4d59-9143-6f87a1e52c02;
 								- m_type = 0;
@@ -6197,7 +6156,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 									- m_anglePoint1 = 0 0 ;
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
-									- m_SourcePort = 190 35 ;
+									- m_SourcePort = 402 60 ;
 									- m_TargetPort = 685 424 ;
 									- m_pInheritsFrom = { IHandle 
 										- _m2Class = "";
@@ -6227,7 +6186,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0802 356 260 ;
+									- m_transform = 0.0875912 0 0 0.0802 568 285 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -6278,7 +6237,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0802 146 100 ;
+									- m_transform = 0.0875912 0 0 0.0802 358 125 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -6329,7 +6288,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0802 86 421 ;
+									- m_transform = 0.0875912 0 0 0.0802 298 446 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -6380,7 +6339,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 8;
 									}
 									- m_drawBehavior = 0;
-									- m_transform = 1 0 0 0.920001 124 346 ;
+									- m_transform = 1 0 0 0.920001 336 371 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_position = 4 0 0  0 25  25 25  25 0  ;
 									- m_pInheritsFrom = { IHandle 
@@ -6411,7 +6370,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 8;
 									}
 									- m_drawBehavior = 0;
-									- m_transform = 1 0 0 0.920001 399 413 ;
+									- m_transform = 1 0 0 0.920001 611 438 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_position = 4 0 0  0 25  25 25  25 0  ;
 									- m_pInheritsFrom = { IHandle 
@@ -6919,7 +6878,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 776 199 ;
+									- m_transform = 0.0875912 0 0 0.0566038 988 224 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -6969,7 +6928,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 962 204 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1174 229 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -7019,7 +6978,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 8;
 									}
 									- m_drawBehavior = 0;
-									- m_transform = 1 0 0 0.92 489 173 ;
+									- m_transform = 1 0 0 0.92 701 198 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_position = 4 0 0  0 25  25 25  25 0  ;
 									- m_pInheritsFrom = { IHandle 
@@ -7050,7 +7009,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 8;
 									}
 									- m_drawBehavior = 0;
-									- m_transform = 1 0 0 0.92 671 115 ;
+									- m_transform = 1 0 0 0.92 883 140 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_position = 4 0 0  0 25  25 25  25 0  ;
 									- m_pInheritsFrom = { IHandle 
@@ -7081,7 +7040,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 8;
 									}
 									- m_drawBehavior = 0;
-									- m_transform = 1 0 0 0.92 625 213 ;
+									- m_transform = 1 0 0 0.92 837 238 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_position = 4 0 0  0 25  25 25  25 0  ;
 									- m_pInheritsFrom = { IHandle 
@@ -7583,7 +7542,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0903285 0 0 0.0566038 506 386 ;
+									- m_transform = 0.0903285 0 0 0.0566038 718 411 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -7952,7 +7911,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 			- _id = GUID 1673c37a-b97f-4a4c-b911-4916c62507a4;
 			- _myState = 8192;
 			- _name = "Sterownik";
-			- _modifiedTimeWeak = 6.25.2015::19:11:53;
+			- _modifiedTimeWeak = 6.25.2015::19:20:10;
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _filename = "";
@@ -7962,7 +7921,7 @@ System.out.println(\"Otwieram drzwi na pietrze \" + obecnePietro);";
 				- _id = GUID 28d79ea2-0c8c-48e0-ab0b-79e11c73daf4;
 			}
 			- _lastID = 7;
-			- weakCGTime = 6.25.2015::19:11:53;
+			- weakCGTime = 6.25.2015::19:20:10;
 			- strongCGTime = 6.24.2015::16:30:1;
 			- Operations = { IRPYRawContainer 
 				- size = 25;
@@ -8480,9 +8439,9 @@ if(itsWinda_1.lacznaIloscPrzystankow() < itsWinda_2.lacznaIloscPrzystankow()){
 					- _id = GUID e4520912-86a6-407b-afa4-d541906c7e78;
 					- _myState = 10240;
 					- _name = "statechart_3";
-					- _modifiedTimeWeak = 6.25.2015::19:11:53;
+					- _modifiedTimeWeak = 6.25.2015::19:20:10;
 					- _lastID = 50;
-					- weakCGTime = 6.25.2015::19:11:53;
+					- weakCGTime = 6.25.2015::19:20:10;
 					- strongCGTime = 6.24.2015::16:30:1;
 					- _multiplicity = "";
 					- _itsStateChart = { IHandle 
@@ -9480,18 +9439,18 @@ if(itsWinda_1.lacznaIloscPrzystankow() < itsWinda_2.lacznaIloscPrzystankow()){
 						{ IState 
 							- _id = GUID 3c1739dc-8539-42d3-bf63-99b42bc94e96;
 							- _name = "ParterGora";
-							- _modifiedTimeWeak = 6.25.2015::19:8:45;
+							- _modifiedTimeWeak = 6.25.2015::19:18:25;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID dfe275ad-2840-4ee8-9eb1-b4ca9358a5ed;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:8:45;
+								- _modifiedTimeWeak = 6.25.2015::19:18:25;
 								- _body = "System.out.println(\"Wezwanie: Parter, do gory\"); 
 Winda winda = wyznaczWinde(0, true);
 if(winda != null){
 	winda.dodajStopWGore(0); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }
 ";
 							}
@@ -9499,18 +9458,18 @@ if(winda != null){
 						{ IState 
 							- _id = GUID fc7a1835-76c6-4374-91fc-71a0f4678642;
 							- _name = "PierwszeGora";
-							- _modifiedTimeWeak = 6.25.2015::19:9:3;
+							- _modifiedTimeWeak = 6.25.2015::19:18:46;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID c9d9fc65-a669-4e94-81dd-86d3805a5474;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:9:3;
+								- _modifiedTimeWeak = 6.25.2015::19:18:46;
 								- _body = "System.out.println(\"Wezwanie: Pierwsze, do gory\");
 Winda winda = wyznaczWinde(1, true);
 if(winda != null){
 	winda.dodajStopWGore(1); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }
 ";
 							}
@@ -9518,19 +9477,19 @@ if(winda != null){
 						{ IState 
 							- _id = GUID 5cded7c2-6da4-49e1-adff-301f17430a09;
 							- _name = "PierwszeDol";
-							- _modifiedTimeWeak = 6.25.2015::19:10:26;
+							- _modifiedTimeWeak = 6.25.2015::19:19:35;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID 7a0617cb-dbff-4767-a9de-d6d4cd01e6fe;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:10:26;
+								- _modifiedTimeWeak = 6.25.2015::19:19:35;
 								- _body = "System.out.println(\"Wezwanie: Pierwsze, na dol\");   
 
 Winda winda = wyznaczWinde(1, false);
 if(winda != null){
 	winda.dodajStopWDol(1); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }
 ";
 							}
@@ -9538,18 +9497,18 @@ if(winda != null){
 						{ IState 
 							- _id = GUID 20b7c971-d1cc-42a5-94de-46b379dbaaca;
 							- _name = "DrugieGora";
-							- _modifiedTimeWeak = 6.25.2015::19:9:15;
+							- _modifiedTimeWeak = 6.25.2015::19:18:56;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID 504d33ad-6a70-4282-889d-77ab31391c60;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:9:15;
+								- _modifiedTimeWeak = 6.25.2015::19:18:56;
 								- _body = "System.out.println(\"Wezwanie: Drugie, do gory\"); 
 Winda winda = wyznaczWinde(2, true);
 if(winda != null){
 	winda.dodajStopWGore(2); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }
 ";
 							}
@@ -9557,36 +9516,36 @@ if(winda != null){
 						{ IState 
 							- _id = GUID ea9b35a1-e916-498c-9128-5cc0f87b93f8;
 							- _name = "DrugieDol";
-							- _modifiedTimeWeak = 6.25.2015::19:10:36;
+							- _modifiedTimeWeak = 6.25.2015::19:19:44;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID e10e906a-a7e3-426e-87ec-2406747a49ae;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:10:36;
+								- _modifiedTimeWeak = 6.25.2015::19:19:44;
 								- _body = " System.out.println(\"Wezwanie: Drugie, na dol\");  
 Winda winda = wyznaczWinde(2, false);
 if(winda != null){
 	winda.dodajStopWDol(2); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }";
 							}
 						}
 						{ IState 
 							- _id = GUID 817793c2-ae17-4447-9afa-d6ab7f2e374f;
 							- _name = "TrzecieGora";
-							- _modifiedTimeWeak = 6.25.2015::19:9:25;
+							- _modifiedTimeWeak = 6.25.2015::19:19:14;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID c256c90f-44a6-487b-86c8-7b3edfa6ae39;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:9:25;
+								- _modifiedTimeWeak = 6.25.2015::19:19:14;
 								- _body = " System.out.println(\"Wezwanie: Trzecie, do gory\");
 Winda winda = wyznaczWinde(3, true);
 if(winda != null){
 	winda.dodajStopWGore(3); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }
 ";
 							}
@@ -9594,36 +9553,36 @@ if(winda != null){
 						{ IState 
 							- _id = GUID 8d50097f-3233-430f-a7ed-855f51a35c77;
 							- _name = "TrzecieDol";
-							- _modifiedTimeWeak = 6.25.2015::19:10:57;
+							- _modifiedTimeWeak = 6.25.2015::19:19:53;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID 04ffb276-b800-411e-955d-764f45f0ad99;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:10:57;
+								- _modifiedTimeWeak = 6.25.2015::19:19:53;
 								- _body = "System.out.println(\"Wezwanie: Trzecie, na dol\");             
 Winda winda = wyznaczWinde(3, false);
 if(winda != null){
 	winda.dodajStopWDol(3); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }";
 							}
 						}
 						{ IState 
 							- _id = GUID 09f412a0-e00f-46d8-bc27-d70adb0fab45;
 							- _name = "CzwarteGora";
-							- _modifiedTimeWeak = 6.25.2015::19:9:36;
+							- _modifiedTimeWeak = 6.25.2015::19:19:25;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID 328ab235-e692-462b-af67-93d29d79c3eb;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:9:36;
+								- _modifiedTimeWeak = 6.25.2015::19:19:25;
 								- _body = " System.out.println(\"Wezwanie: Czwarte, do gory\");     
 Winda winda = wyznaczWinde(4, true);
 if(winda != null){
 	winda.dodajStopWGore(4); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }
 ";
 							}
@@ -9631,36 +9590,36 @@ if(winda != null){
 						{ IState 
 							- _id = GUID e3c18d9d-48f8-491e-becd-ecf4f53100a5;
 							- _name = "CzwarteDol";
-							- _modifiedTimeWeak = 6.25.2015::19:11:11;
+							- _modifiedTimeWeak = 6.25.2015::19:20:2;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID fe4a5658-c1d4-46ba-9328-4a4148bf6167;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:11:11;
+								- _modifiedTimeWeak = 6.25.2015::19:20:2;
 								- _body = "   System.out.println(\"Wezwanie: Czwarte, na dol\");    
 Winda winda = wyznaczWinde(4, false);
 if(winda != null){
 	winda.dodajStopWDol(4); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }";
 							}
 						}
 						{ IState 
 							- _id = GUID 7826ff0e-ffb6-42c8-8b65-d256ec467ca6;
 							- _name = "PiateDol";
-							- _modifiedTimeWeak = 6.25.2015::19:11:26;
+							- _modifiedTimeWeak = 6.25.2015::19:20:10;
 							- _parent = GUID 5ee215b5-1247-4cc7-870a-75333606e7ad;
 							- _defaultTrans = ;
 							- _entryAction = { IAction 
 								- _id = GUID c5deb5fe-6625-424d-90f3-36bb621a8b10;
 								- _myState = 4096;
-								- _modifiedTimeWeak = 6.25.2015::19:11:26;
+								- _modifiedTimeWeak = 6.25.2015::19:20:10;
 								- _body = " System.out.println(\"Wezwanie: Piate, na dol\");   
 Winda winda = wyznaczWinde(5, false);
 if(winda != null){
 	winda.dodajStopWDol(5); 
-	winda.gen(new evRun());
+	winda.gen(new evUruchom());
 }";
 							}
 						}
@@ -9867,7 +9826,7 @@ itsWinda_2.dodajStopWDol(5);";
 							}
 						}
 					}
-					- _version = 6.25.2015::21:11:53;
+					- _version = 6.25.2015::21:20:10;
 					- _baseVersion = 1.2.1990::0:0:0;
 					- _diagram = GUID 0c127e6e-a95f-4e24-b074-779d0dd13207;
 					- Views = { IRPYRawContainer 
@@ -9944,8 +9903,8 @@ itsWinda_2.dodajStopWDol(5);";
 								}
 							}
 							- _name = "statechartdiagram_0";
-							- _modifiedTimeWeak = 6.25.2015::19:8:45;
-							- _lastModifiedTime = "6.25.2015::19:11:53";
+							- _modifiedTimeWeak = 6.25.2015::19:18:25;
+							- _lastModifiedTime = "6.26.2015::10:12:37";
 							- _graphicChart = { CGIStateChart 
 								- _id = GUID b83f587d-d082-4fb9-8f4d-e4273a8f05d8;
 								- m_type = 0;
@@ -10041,7 +10000,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 604 196 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1106 297 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10138,7 +10097,7 @@ itsWinda_2.dodajStopWDol(5);";
 									- m_anglePoint1 = 0 0 ;
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
-									- m_SourcePort = 645 159 ;
+									- m_SourcePort = 1147 260 ;
 									- m_TargetPort = 445 371 ;
 									- m_pInheritsFrom = { IHandle 
 										- _m2Class = "";
@@ -10168,7 +10127,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 945 167 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1447 268 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10218,7 +10177,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 947 230 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1449 331 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10268,7 +10227,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 923 577 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1425 678 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10552,7 +10511,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 949 290 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1451 391 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10602,7 +10561,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 922 638 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1424 739 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10652,7 +10611,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 950 352 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1452 453 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10702,7 +10661,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 922 701 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1424 802 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10752,7 +10711,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 947 419 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1449 520 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10802,7 +10761,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 922 763 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1424 864 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10852,7 +10811,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 922 828 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1424 929 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -10946,7 +10905,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_bImplicitSetRectPoints = 0;
 										- m_nOrientationCtrlPt = 0;
 									}
-									- m_arrow = 1 839 301  ;
+									- m_arrow = 1 1341 402  ;
 									- m_anglePoint1 = 0 0 ;
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
@@ -11027,7 +10986,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nVerticalSpacing = 31;
 										- m_nOrientationCtrlPt = 0;
 									}
-									- m_arrow = 1 756 570  ;
+									- m_arrow = 1 1258 671  ;
 									- m_anglePoint1 = 0 0 ;
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
@@ -11461,7 +11420,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 1077 73 ;
+									- m_transform = 0.0875912 0 0 0.0566038 1579 174 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -11973,7 +11932,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 283 79 ;
+									- m_transform = 0.0875912 0 0 0.0566038 785 180 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12023,7 +11982,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 286 145 ;
+									- m_transform = 0.0875912 0 0 0.0566038 788 246 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12073,7 +12032,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 287 208 ;
+									- m_transform = 0.0875912 0 0 0.0566038 789 309 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12123,7 +12082,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 287 272 ;
+									- m_transform = 0.0875912 0 0 0.0566038 789 373 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12173,7 +12132,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 287 336 ;
+									- m_transform = 0.0875912 0 0 0.0566038 789 437 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12223,7 +12182,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 287 397 ;
+									- m_transform = 0.0875912 0 0 0.0566038 789 498 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12658,7 +12617,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 288 466 ;
+									- m_transform = 0.0875912 0 0 0.0566038 790 567 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12708,7 +12667,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 291 532 ;
+									- m_transform = 0.0875912 0 0 0.0566038 793 633 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12758,7 +12717,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 292 595 ;
+									- m_transform = 0.0875912 0 0 0.0566038 794 696 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12808,7 +12767,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 292 659 ;
+									- m_transform = 0.0875912 0 0 0.0566038 794 760 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12858,7 +12817,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 292 723 ;
+									- m_transform = 0.0875912 0 0 0.0566038 794 824 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -12908,7 +12867,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.0875912 0 0 0.0566038 292 784 ;
+									- m_transform = 0.0875912 0 0 0.0566038 794 885 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -13882,7 +13841,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.104927 0 0 0.0566038 88 206 ;
+									- m_transform = 0.104927 0 0 0.0566038 590 307 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -13932,7 +13891,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_nOrientationCtrlPt = 5;
 									}
 									- m_drawBehavior = 4104;
-									- m_transform = 0.104927 0 0 0.0566038 80 457 ;
+									- m_transform = 0.104927 0 0 0.0566038 582 558 ;
 									- m_bIsPreferencesInitialized = 1;
 									- m_AdditionalLabel = { CGIText 
 										- m_str = "";
@@ -14950,7 +14909,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_bImplicitSetRectPoints = 0;
 										- m_nOrientationCtrlPt = 0;
 									}
-									- m_arrow = 1 238 77  ;
+									- m_arrow = 1 740 178  ;
 									- m_anglePoint1 = 0 0 ;
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
@@ -15028,7 +14987,7 @@ itsWinda_2.dodajStopWDol(5);";
 										- m_bImplicitSetRectPoints = 0;
 										- m_nOrientationCtrlPt = 0;
 									}
-									- m_arrow = 2 23 167  413 -6  ;
+									- m_arrow = 2 525 268  915 95  ;
 									- m_anglePoint1 = 0 0 ;
 									- m_anglePoint2 = 0 0 ;
 									- m_line_style = 1;
